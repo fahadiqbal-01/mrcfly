@@ -2,10 +2,19 @@ import { useEffect, useState } from "react";
 import { db } from "../firebase";
 import { doc, setDoc } from "firebase/firestore";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase";
+import { signOut } from "firebase/auth";
 
 export default function AdminUpload() {
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      window.location.href = "/login";
+    } catch (err) {
+      alert("Error signing out: " + err.message);
+    }
+  };
+
   const [form, setForm] = useState({
     id: "",
     name: "",
@@ -59,30 +68,36 @@ export default function AdminUpload() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="ID"
-        onChange={(e) => setForm({ ...form, id: e.target.value })}
-      />
-      <input
-        type="text"
-        placeholder="Name"
-        onChange={(e) => setForm({ ...form, name: e.target.value })}
-      />
-      <input
-        type="text"
-        placeholder="Status"
-        onChange={(e) => setForm({ ...form, status: e.target.value })}
-      />
-      <input
-        type="file"
-        accept="image/*"
-        onChange={(e) => setForm({ ...form, image: e.target.files[0] })}
-      />
-      <button type="submit" className=" cursor-pointer ">
-        Submit
-      </button>
-    </form>
+    <section>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="ID"
+          onChange={(e) => setForm({ ...form, id: e.target.value })}
+        />
+        <input
+          type="text"
+          placeholder="Name"
+          onChange={(e) => setForm({ ...form, name: e.target.value })}
+        />
+        <input
+          type="text"
+          placeholder="Status"
+          onChange={(e) => setForm({ ...form, status: e.target.value })}
+        />
+        <input
+          type="file"
+          accept="image/*"
+          onChange={(e) => setForm({ ...form, image: e.target.files[0] })}
+        />
+        <button type="submit" className=" cursor-pointer ">
+          Submit
+        </button>
+      </form>{" "}
+      <div>
+        <button onClick={handleLogout}>Sign Out</button>
+        {/* Your upload form below here */}
+      </div>
+    </section>
   );
 }
