@@ -15,15 +15,18 @@ import { signOut } from "firebase/auth";
 
 export default function AdminUpload() {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (!user) {
-        navigate("/login");
+        window.location.href = "/login";
+      } else {
+        setLoading(false);
       }
     });
     return () => unsubscribe();
-  }, [navigate]);
+  }, []);
 
   const handleLogout = async () => {
     try {
@@ -164,6 +167,16 @@ export default function AdminUpload() {
       querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
     );
   };
+
+  if (loading) {
+    return (
+      <section className="min-h-screen flex items-center justify-center bg-[#F0FDF4]">
+        <div className="text-lg font-bold text-gray-600">
+          Checking authentication...
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="min-h-screen bg-[#F0FDF4] pt-[40px] pb-[24px] px-2 sm:px-4">
