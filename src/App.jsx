@@ -1,34 +1,28 @@
 import {
-  BrowserRouter as Route,
-  RouterProvider,
   createBrowserRouter,
+  RouterProvider,
+  Route,
   createRoutesFromElements,
 } from "react-router-dom";
 import TrackServices from "./Pages/TrackServices";
 import AdminUpload from "./Pages/AdminUpload";
 import AdminLogin from "./Pages/AdminLogin";
-import PrivateRoute from "./components/PrivateRoute";
 import RootLayout from "./Layouts/RootLayout";
-import { useState } from "react";
+import Home from "./Pages/Home";
+import JobApplications from "./Pages/JobApplications";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <RootLayout />,
-      children: [
-        { index: true, element: <TrackServices /> },
-        {
-          path: "admin",
-          element: <PrivateRoute />,
-          children: [{ index: true, element: <AdminUpload /> }],
-        },
-        { path: "login", element: <AdminLogin /> },
-      ],
-    },
-  ]);
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<RootLayout />}>
+        <Route index element={<TrackServices />} />
+        <Route path="admin" element={<AdminUpload />} />
+        <Route path="login" element={<AdminLogin />} />
+        <Route path="jobapplication" element={<JobApplications />} />
+        <Route path="home" element={<Home />} />
+      </Route>
+    )
+  );
 
   return <RouterProvider router={router} />;
 }

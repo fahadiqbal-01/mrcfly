@@ -1,3 +1,43 @@
 @import "tailwindcss";
- 
 
+@theme {
+  --color-white: #dcfce7;
+  --color-black: #111827;
+  --color-green: #047857;
+  --font-Gambetta: "Gambetta", "sans-serif";
+  --font-G-Sans: "G-Sans", "sans-serif";
+  --font-G-Sans-bold: "G-Sans-bold", "sans-serif";
+}
+
+@font-face {
+  font-family: Gambetta;
+  src: url(./assets/fonts/Gambetta_Complete/Gambetta_Complete/Fonts/OTF/Gambetta-Regular.otf);
+  fontmat: "opentype";
+}
+@font-face {
+  font-family: G-Sans;
+  src: url(./assets/fonts/GeneralSans_Complete/GeneralSans_Complete/Fonts/OTF/GeneralSans-Semibold.otf);
+  format: "opentype";
+}
+@font-face {
+  font-family: G-Sans-bold;
+  src: url(./assets/fonts/GeneralSans_Complete/GeneralSans_Complete/Fonts/OTF/GeneralSans-Bold.otf);
+  format: "opentype";
+}
+#track-services-banner {
+  background: #14532d;
+  background: linear-gradient(
+    90deg,
+    rgba(20, 83, 45, 1) 0%,
+    rgba(4, 120, 87, 1) 100%
+  );
+}
+
+#NeedHelp {
+  background: #14532d;
+  background: linear-gradient(
+    90deg,
+    rgba(20, 83, 45, 1) 0%,
+    rgba(4, 120, 87, 1) 100%
+  );
+}
