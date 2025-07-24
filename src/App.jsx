@@ -18,7 +18,7 @@ function App() {
   const [showWelcome, setShowWelcome] = useState(true);
 
   useEffect(() => {
-    // Show welcome for 2 seconds, then slide down over 1.5 seconds
+    // Show welcome for 2 seconds, then fade out over 1 second
     const timer = setTimeout(() => setShowWelcome(false), 2000);
     return () => clearTimeout(timer);
   }, []);
@@ -39,51 +39,43 @@ function App() {
 
   return (
     <>
-      {/* Main website is always rendered */}
-      <RouterProvider router={router} />
-
-      {/* Welcome overlay slides down and reveals the site behind */}
-      {showWelcome && (
-        <div
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-green"
-          style={{
-            color: "#fff",
-            fontSize: "2rem",
-            fontWeight: "bold",
-            letterSpacing: "2px",
-            overflow: "hidden",
-          }}
-        >
-          <div className="w-full h-full flex items-center justify-center animate-welcome-slide-down">
-            Welcome
-          </div>
-          <style>
-            {`
-              @keyframes welcome-slide-down {
-                0% {
-                  transform: translateY(-100vh);
-                  opacity: 0;
-                }
-                20% {
-                  transform: translateY(0);
-                  opacity: 1;
-                }
-                80% {
-                  transform: translateY(0);
-                  opacity: 1;
-                }
-                100% {
-                  transform: translateY(100vh);
-                  opacity: 0;
-                }
-              }
-              .animate-welcome-slide-down {
-                animation: welcome-slide-down 1.5s cubic-bezier(0.22, 1, 1, 1) 0s forwards;
-              }
-            `}
-          </style>
-        </div>
-      )}
+      <div
+        className={`fixed inset-0 z-[9999] flex items-center justify-center bg-green transition-opacity duration-1000 ease-out ${
+          showWelcome
+            ? "opacity-100 pointer-events-auto animate-welcome-slide-up"
+            : "opacity-0 pointer-events-none"
+        }`}
+        style={{
+          color: "#fff",
+          fontSize: "2rem",
+          fontWeight: "bold",
+          letterSpacing: "2px",
+        }}
+      >
+        Welcome
+        <style>
+          {`
+          @keyframes welcome-slide-up {
+            0% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+            80% {
+              transform: translateY(0);
+              opacity: 1;
+            }
+            100% {
+              transform: translateY(-100vh);
+              opacity: 0;
+            }
+          }
+          .animate-welcome-slide-up {
+            animation: welcome-slide-up 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+          }
+        `}
+        </style>
+      </div>
+      {!showWelcome && <RouterProvider router={router} />}
     </>
   );
 }
