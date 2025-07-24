@@ -21,9 +21,13 @@ const Navbar = () => {
           <Link to="/jobapplication">
             <ListItems>Job Applications</ListItems>
           </Link>
+          <Link to="/applications">
+            <ListItems>Applications</ListItems>
+          </Link>
 
-          <ListItems>Applications</ListItems>
-          <ListItems>Services</ListItems>
+          <Link to="/services">
+            <ListItems>Services</ListItems>
+          </Link>
           <Link to="/">
             <ListItems>Track Service</ListItems>
           </Link>

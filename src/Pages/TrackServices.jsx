@@ -69,20 +69,28 @@ export default function TrackServices() {
             {/* Show search box and help text ONLY when not loading and not showing result */}
             {!loading && (!data || !imageLoaded) && !showResult ? (
               <>
-                <div className="flex items-center justify-center gap-[16px]">
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    handleSearch();
+                  }}
+                  className="flex items-center justify-center gap-[16px]"
+                >
                   <input
-                    className="bg-[#ffffff] px-[25px] py-[19px] w-full max-w-[610px] border-2 border-[#9CA3AF] rounded-[8px] focus:outline-none focus:border-green placeholder:text-[18px] placeholder:font-Gambetta"
+                    className="bg-[#ffffff] px-[25px] py-[19px] w-full max-w-[610px] border-2 border-[#9CA3AF] rounded-[8px]
+                     focus:outline-none focus:border-green placeholder:text-[18px] placeholder:font-Gambetta"
                     type="text"
                     placeholder="Enter Passport/NID Number"
                     onChange={(e) => setId(e.target.value)}
                   />
                   <button
-                    onClick={handleSearch}
-                    className="flex justify-center items-center gap-[6px] font-G-Sans text-[18px] text-white leading-[28px] bg-[#16A34A] opacity-50 px-[34px] py-[17px] rounded-[8px] select-auto cursor-pointer"
+                    type="submit"
+                    className="flex justify-center items-center gap-[6px] font-G-Sans text-[18px] text-white leading-[28px] tracking-[6px]
+                     bg-[#82d19f]  px-[34px] py-[17px] rounded-[8px] select-auto cursor-pointer hover:bg-[#0c6440] transition-colors duration-300 ease-out"
                   >
                     <IoMdSearch className="text-[22px]" /> Track
                   </button>
-                </div>
+                </form>
                 {/* Help/support text */}
                 <div className="mt-[24px]">
                   <h2 className="font-Gambetta text-[14px] leading-[20px] text-[#4B5563] text-center">
