@@ -9,6 +9,7 @@ import { IoCallOutline } from "react-icons/io5";
 import ContainerSec from "../components/ContainerSec";
 import { div } from "framer-motion/client";
 import NeedHelp from "../components/NeedHelp";
+import { Link } from "react-router-dom";
 
 export default function TrackServices() {
   const [id, setId] = useState("");
@@ -51,7 +52,7 @@ export default function TrackServices() {
   return (
     <section>
       <TrackServicesBanner />
-      <ContainerSec className=" mb-[120px] " >
+      <ContainerSec className=" mb-[120px] ">
         <div className="pt-[80px] text-center">
           <h3 className="font-G-Sans-bold text-[30px] leading-[36px] text-black">
             Track Your Service
@@ -60,6 +61,7 @@ export default function TrackServices() {
             Enter your service ID or registered email address to view the
             current status of your request
           </h4>
+          <Link to="/admin">Admin</Link>
         </div>
 
         <div className="mt-[48px] bg-[#F0FDF4] border-2 border-[#BBF7D0] rounded-2xl relative">
