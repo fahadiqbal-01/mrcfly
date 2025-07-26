@@ -45,6 +45,7 @@ export default function AdminUpload() {
     shortNote: "",
     date: "",
     image: null,
+    driveLink: "", // <-- add this
   });
 
   const [entries, setEntries] = useState([]);
@@ -55,6 +56,7 @@ export default function AdminUpload() {
     serviceType: "",
     shortNote: "",
     date: "",
+    driveLink: "", // <-- add this
   });
 
   const uploadToCloudinary = async (file) => {
@@ -114,6 +116,7 @@ export default function AdminUpload() {
         shortNote: form.shortNote,
         date: form.date,
         imageUrl: imageUrl,
+        driveLink: form.driveLink || "", // <-- add this
       });
 
       alert("Successfully saved!");
@@ -144,6 +147,7 @@ export default function AdminUpload() {
       serviceType: entry.serviceType,
       shortNote: entry.shortNote,
       date: entry.date,
+      driveLink: entry.driveLink || "",
     });
   };
 
@@ -308,6 +312,14 @@ export default function AdminUpload() {
                     placeholder="Date"
                     className="bg-white px-4 py-2 border-2 border-[#9CA3AF] rounded-[8px] w-full sm:w-[140px]"
                   />
+                  <input
+                    type="text"
+                    name="driveLink"
+                    value={editForm.driveLink || ""}
+                    onChange={handleEditChange}
+                    placeholder="Google Drive Link"
+                    className="bg-white px-4 py-2 border-2 border-[#9CA3AF] rounded-[8px] w-full sm:w-[180px]"
+                  />
                   <button
                     onClick={saveEdit}
                     className="bg-[#16A34A] text-white px-4 py-2 rounded-[8px] ml-0 sm:ml-2 hover:bg-[#15803d] duration-300 ease-out w-full sm:w-auto"
@@ -341,6 +353,21 @@ export default function AdminUpload() {
                     </span>
                     <span>
                       <b>Date:</b> {entry.date}
+                    </span>
+                    <span>
+                      <b>Drive Link:</b>{" "}
+                      {entry.driveLink ? (
+                        <a
+                          href={entry.driveLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 underline"
+                        >
+                          Google Drive
+                        </a>
+                      ) : (
+                        "N/A"
+                      )}
                     </span>
                   </div>
                   <div className="flex gap-2 mt-4 md:mt-0 w-full md:w-auto justify-center md:justify-end">

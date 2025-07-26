@@ -7,9 +7,7 @@ import { CiMail, CiSearch } from "react-icons/ci";
 import { IoMdSearch } from "react-icons/io";
 import { IoCallOutline } from "react-icons/io5";
 import ContainerSec from "../components/ContainerSec";
-import { div } from "framer-motion/client";
 import NeedHelp from "../components/NeedHelp";
-import { Link } from "react-router-dom";
 
 export default function TrackServices() {
   const [id, setId] = useState("");
@@ -30,8 +28,6 @@ export default function TrackServices() {
 
     if (docSnap.exists()) {
       setData(docSnap.data());
-      // Don't set loading to false here!
-      // Wait until image loads
     } else {
       setData(null);
       setLoading(false);
@@ -61,12 +57,10 @@ export default function TrackServices() {
             Enter your service ID or registered email address to view the
             current status of your request
           </h4>
-          <Link to="/admin">Admin</Link>
         </div>
 
         <div className="mt-[48px] bg-[#F0FDF4] border-2 border-[#BBF7D0] rounded-2xl relative">
           <div className="p-[33px]">
-            {/* Show search box and help text ONLY when not loading and not showing result */}
             {!loading && (!data || !imageLoaded) && !showResult ? (
               <>
                 <form
@@ -74,11 +68,12 @@ export default function TrackServices() {
                     e.preventDefault();
                     handleSearch();
                   }}
-                  className="flex items-center justify-center gap-[16px]"
+                  className="flex items-center justify-center gap-[16px] relative"
+                  style={{ minHeight: 80 }}
                 >
                   <input
                     className="bg-[#ffffff] px-[25px] py-[19px] w-full max-w-[610px] border-2 border-[#9CA3AF] rounded-[8px]
-                     focus:outline-none focus:border-green placeholder:text-[18px] placeholder:font-Gambetta"
+                      focus:outline-none focus:border-green placeholder:text-[18px] placeholder:font-Gambetta"
                     type="text"
                     placeholder="Enter Passport/NID Number"
                     onChange={(e) => setId(e.target.value)}
@@ -86,23 +81,29 @@ export default function TrackServices() {
                   <button
                     type="submit"
                     className="flex justify-center items-center gap-[6px] font-G-Sans text-[18px] text-white leading-[28px] tracking-[6px]
-                     bg-[#82d19f]  px-[34px] py-[17px] rounded-[8px] select-auto cursor-pointer hover:bg-[#0c6440] transition-colors duration-300 ease-out"
+                      bg-[#82d19f]  px-[34px] py-[17px] rounded-[8px] select-auto cursor-pointer hover:bg-[#0c6440] transition-colors duration-300 ease-out"
+                    disabled={loading}
                   >
                     <IoMdSearch className="text-[22px]" /> Track
                   </button>
+                  {loading && (
+                    <div>
+                      <img src="images/plane.gif" alt="" />
+                    </div>
+                  )}
                 </form>
-                {/* Help/support text */}
+
                 <div className="mt-[24px]">
                   <h2 className="font-Gambetta text-[14px] leading-[20px] text-[#4B5563] text-center">
                     Need help finding your service ID? Check your email
                     confirmation or contact our support team.
                   </h2>
                   <div className="flex items-center justify-center gap-[16px] mt-[16px]">
-                    <h3 className="flex items-center justify-center gap-[6px] font-Gambetta text-[14px] leading-[20px] text-[#4B5563]">
+                    <h3 className="flex items-center justify-center gap-[6px] text-[14px] leading-[20px] text-[#4B5563]">
                       <IoCallOutline className="text-[14px]" />
                       +1 (234) 567-890
                     </h3>
-                    <h4 className="flex items-center justify-center gap-[6px] font-Gambetta text-[14px] leading-[20px] text-[#4B5563]">
+                    <h4 className="flex items-center justify-center gap-[6px] text-[14px] leading-[20px] text-[#4B5563]">
                       <CiMail className="text-[14px]" />
                       support@mrs.com
                     </h4>
@@ -172,9 +173,19 @@ export default function TrackServices() {
                 </h3>
                 <div className="mt-6">
                   {data.status === "Complete" ? (
-                    <span className="bg-[#DCFCE7] font-Gambetta text-[16px] text-green-600 px-[16px] py-[8px] rounded-xl">
-                      Status: {data.status}
-                    </span>
+                    <div className=" flex flex-wrap gap-[16px] ">
+                      <span className="bg-[#DCFCE7] font-Gambetta text-[16px] text-green-600 px-[16px] py-[8px] rounded-xl">
+                        Status: {data.status}
+                      </span>
+                      <a
+                        href={data.driveLink}
+                        target="blank"
+                        className=" font-Gambetta text-[16px] text-black bg-[#EAB308] px-[16px] py-[8px] border-2 border-transparent
+                       rounded-xl hover:bg-transparent hover:border-[#EAB308] hover:text-[#EAB308] duration-200 ease-out "
+                      >
+                        Download
+                      </a>
+                    </div>
                   ) : (
                     <span className="bg-[#DBEAFE] font-Gambetta text-[16px] text-[#1E40AF] px-[16px] py-[8px] rounded-xl">
                       Status: {data.status}
