@@ -1,14 +1,18 @@
 import React from "react";
-import NavBar from "../components/Navbar";
-import { Outlet } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import Footer from "../components/Footer";
 
 const RootLayout = () => {
   return (
     <>
-      <NavBar />
-      <Outlet />
+      <Navbar />
+      {/* It's good practice to wrap your page content in a <main> tag for accessibility */}
+      <main>
+        <Outlet />
+      </main>
       <Footer />
+      <ScrollRestoration />
     </>
   );
 };

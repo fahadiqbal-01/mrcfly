@@ -15,8 +15,8 @@ const NeedHelp = () => {
 
       <a
         href=""
-        className=" inline-block bg-[#EAB308] px-[32px] py-[18px] border-2 border-transparent rounded-[8px] text-[18px]
-         text-[#14532D] leading-[28px] mt-[32px] hover:bg-transparent hover:text-[#EAB308] hover:border-[#EAB308] duration-200 ease-out "
+        className=" inline-block bg-orange px-[32px] py-[18px] border-2 border-transparent rounded-[8px] text-[18px]
+         text-[#ffffff] leading-[28px] mt-[32px] hover:bg-transparent hover:text-orange hover:border-orange duration-200 ease-out select-none "
       >
         Contact Support
       </a>

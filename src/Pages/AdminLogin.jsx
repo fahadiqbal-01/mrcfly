@@ -13,7 +13,7 @@ export default function AdminLogin() {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate("/admin");
+      navigate("/adminmrc");
     } catch (error) {
       alert("Login failed: " + error.message);
     }

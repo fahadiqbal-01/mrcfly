@@ -12,7 +12,9 @@ import RootLayout from "./Layouts/RootLayout";
 import Home from "./Pages/Home";
 import JobApplications from "./Pages/JobApplications";
 import Services from "./Pages/Services";
-import Applications from "./Pages/Applications";
+import WorkPermit from "./Pages/WorkPermit";
+import StudentVisa from "./Pages/StudentVisa";
+import Touristvisa from "./Pages/Touristvisa";
 
 function App() {
 
@@ -20,12 +22,14 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route index element={<TrackServices />} />
-        <Route path="admin" element={<AdminUpload />} />
+        <Route path="adminmrc" element={<AdminUpload />} />
         <Route path="login" element={<AdminLogin />} />
         <Route path="jobapplication" element={<JobApplications />} />
         <Route path="home" element={<Home />} />
         <Route path="services" element={<Services />} />
-        <Route path="applications" element={<Applications />} />
+        <Route path="workpermit" element={<WorkPermit />} />
+        <Route path="studentvisa" element={<StudentVisa />} />
+        <Route path="touristvisa" element={<Touristvisa />} />
       </Route>
     )
   );

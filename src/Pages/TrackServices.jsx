@@ -59,7 +59,7 @@ export default function TrackServices() {
           </h4>
         </div>
 
-        <div className="mt-[48px] bg-[#F0FDF4] border-2 border-[#BBF7D0] rounded-2xl relative">
+        <div className="mt-[48px] bg-transparent border-2 border-[#9CA3AF] rounded-2xl relative">
           <div className="p-[33px]">
             {!loading && (!data || !imageLoaded) && !showResult ? (
               <>
@@ -72,16 +72,18 @@ export default function TrackServices() {
                   style={{ minHeight: 80 }}
                 >
                   <input
-                    className="bg-[#ffffff] px-[25px] py-[19px] w-full max-w-[610px] border-2 border-[#9CA3AF] rounded-[8px]
-                      focus:outline-none focus:border-green placeholder:text-[18px] placeholder:font-Gambetta"
-                    type="text"
+                  id="service-id-input"
+                    className=" font-G-Sans-bold bg-[#ffffff] px-[25px] py-[19px] w-full max-w-[610px] border-2 border-[#9CA3AF] rounded-[8px]
+                      focus:outline-none focus:border-orange placeholder:text-[18px] placeholder:select-none placeholder:font-Gambetta no-arrows "
+                    type="number"
                     placeholder="Enter Passport/NID Number"
                     onChange={(e) => setId(e.target.value)}
                   />
                   <button
                     type="submit"
                     className="flex justify-center items-center gap-[6px] font-G-Sans text-[18px] text-white leading-[28px] tracking-[6px]
-                      bg-[#82d19f]  px-[34px] py-[17px] rounded-[8px] select-auto cursor-pointer hover:bg-[#0c6440] transition-colors duration-300 ease-out"
+                      bg-orange border-2 border-transparent  px-[34px] py-[17px] rounded-[8px] select-auto cursor-pointer 
+                      hover:border-orange hover:text-orange hover:bg-transparent transition-colors duration-300 ease-out select-none "
                     disabled={loading}
                   >
                     <IoMdSearch className="text-[22px]" /> Track
@@ -142,7 +144,7 @@ export default function TrackServices() {
               className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"
             >
               <div
-                className="bg-[#F0FDF4] border-2 border-[#BBF7D0] rounded-2xl shadow-2xl p-8 flex flex-col items-center justify-center animate-popup"
+                className="bg-transparent backdrop-blur-2xl border-2 border-orange rounded-2xl shadow-2xl p-8 flex flex-col items-center justify-center animate-popup"
                 style={{
                   minWidth: "320px",
                   maxWidth: "95vw",
@@ -156,32 +158,32 @@ export default function TrackServices() {
                   alt="client_image"
                   className="w-[120px] h-[120px] object-cover rounded-xl mb-4 shadow"
                 />
-                <h2 className="font-G-Sans-bold text-[28px] text-black mt-2 text-center">
+                <h2 className="font-G-Sans-bold text-[28px] text-[#ffffff] mt-2 text-center">
                   {data.name}
                 </h2>
                 <div className="flex gap-2 mt-4 justify-center items-center">
-                  <h3 className="font-Gambetta text-[18px] text-gray-500">
+                  <h3 className="font-Gambetta text-[18px] text-gray-200">
                     {data.serviceType}
                   </h3>
                   <span className="text-gray-400">|</span>
-                  <h4 className="font-Gambetta text-[18px] text-gray-500">
+                  <h4 className="font-Gambetta text-[18px] text-gray-200">
                     {data.date}
                   </h4>
                 </div>
-                <h3 className="font-Gambetta text-[18px] text-black leading-[28px] mt-4 text-center">
+                <h3 className="font-Gambetta text-[18px] text-[#ffffff] leading-[28px] mt-4 text-center">
                   {data.shortNote}
                 </h3>
                 <div className="mt-6">
                   {data.status === "Complete" ? (
                     <div className=" flex flex-wrap gap-[16px] ">
-                      <span className="bg-[#DCFCE7] font-Gambetta text-[16px] text-green-600 px-[16px] py-[8px] rounded-xl">
+                      <span className="bg-green font-Gambetta text-[16px] text-white px-[16px] py-[8px] rounded-xl select-none ">
                         Status: {data.status}
                       </span>
                       <a
                         href={data.driveLink}
                         target="blank"
-                        className=" font-Gambetta text-[16px] text-black bg-[#EAB308] px-[16px] py-[8px] border-2 border-transparent
-                       rounded-xl hover:bg-transparent hover:border-[#EAB308] hover:text-[#EAB308] duration-200 ease-out "
+                        className=" font-Gambetta text-[16px] text-black bg-orange px-[16px] py-[8px] border-2 border-transparent
+                       rounded-xl hover:bg-transparent hover:border-orange hover:text-orange duration-200 ease-out cursor-default select-none z-50 "
                       >
                         Download
                       </a>

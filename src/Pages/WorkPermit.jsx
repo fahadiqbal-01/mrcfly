@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Applications = () => {
+const WorkPermit = () => {
   return (
     <div className=" h-[100vh] w-fit flex items-center mx-auto text-[20px] ">
       Under Development{" "}
@@ -8,4 +8,4 @@ const Applications = () => {
   )
 }
 
-export default Applications
+export default WorkPermit

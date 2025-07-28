@@ -183,8 +183,8 @@ export default function AdminUpload() {
   }
 
   return (
-    <section className="min-h-screen bg-[#F0FDF4] pt-[40px] pb-[24px] px-2 sm:px-4">
-      <div className="max-w-4xl mx-auto bg-[#707071] border-2 border-[#BBF7D0] rounded-2xl shadow-lg p-4 sm:p-8 md:p-[40px]">
+    <section className="min-h-screen bg-[#ffffff] pt-[40px] pb-[24px] px-2 sm:px-4">
+      <div className="max-w-4xl mx-auto bg-[#707071] border-2 border-navyBlue rounded-2xl shadow-lg p-4 sm:p-8 md:p-[40px]">
         <h2 className="font-G-Sans-bold text-[24px] sm:text-[30px] leading-[32px] sm:leading-[36px] text-black text-center mb-6">
           Admin Upload Panel
         </h2>
@@ -268,7 +268,7 @@ export default function AdminUpload() {
           {entries.map((entry) => (
             <div
               key={entry.id}
-              className="bg-[#F0FDF4] border-2 border-[#BBF7D0] rounded-xl p-4 sm:p-6 mb-6 shadow flex flex-col md:flex-row items-center justify-between"
+              className="bg-[#F0FDF4] border-2 border-[#ffffff] rounded-xl p-4 sm:p-6 mb-6 shadow flex flex-col md:flex-row items-center justify-between"
             >
               {editId === entry.id ? (
                 <div className="flex flex-wrap gap-2 sm:gap-4 items-center w-full">
