@@ -176,13 +176,13 @@ export default function TrackServices() {
                 <div className="mt-6">
                   {data.status === "Complete" ? (
                     <div className=" flex flex-wrap gap-[16px] ">
-                      <span className="bg-green font-Gambetta text-[16px] text-white px-[16px] py-[8px] rounded-xl select-none ">
+                      <span className="bg-[#DCFCE7] font-Gambetta text-[16px] text-green px-[16px] py-[8px] rounded-xl select-none ">
                         Status: {data.status}
                       </span>
                       <a
                         href={data.driveLink}
                         target="blank"
-                        className=" font-Gambetta text-[16px] text-black bg-orange px-[16px] py-[8px] border-2 border-transparent
+                        className=" font-Gambetta text-[16px] text-[#ffffff] bg-orange px-[16px] py-[8px] border-2 border-transparent
                        rounded-xl hover:bg-transparent hover:border-orange hover:text-orange duration-200 ease-out cursor-default select-none z-50 "
                       >
                         Download
