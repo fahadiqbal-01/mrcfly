@@ -29,7 +29,6 @@
 
 html {
   scroll-behavior: smooth;
-  height: 100%;
 }
 #track-services-banner {
   background: #00395f;
@@ -41,7 +40,7 @@ html {
 }
 
 #NeedHelp {
-  background: url(../public/images/banner.png);
+  background: url(../public/images/banner.png) ;
 }
 
 /* Chrome, Safari, Edge, Opera */

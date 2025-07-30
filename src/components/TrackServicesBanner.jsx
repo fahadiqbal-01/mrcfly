@@ -1,21 +1,31 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const TrackServicesBanner = () => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0}}
+      whileInView={{ opacity: 1}}
+      transition={{ duration: 1, ease: "easeInOut" }}
+      viewport={{ once: true }}
       id="track-services-banner"
       className=" pt-[80px] pb-[120px] drop-shadow-lg "
     >
-      <h1 className=" font-G-Sans-bold text-[48px] text-center ">
+      <h1 className=" font-G-Sans-bold xl:text-[48px] lg:text-[38px] md:text-[28px] text-[24px] text-center ">
         <p className=" text-[#FFFFFF] ">Track Your</p>
-        <p className=" text-orange mt-[-18px] ">Service Progress</p>
+        <p className=" text-orange xl:mt-[-18px] lg:mt-[-14px] md:mt-[-10px] ">
+          Service Progress
+        </p>
       </h1>
-      <p className=" font-Gambetta text-[20px] leading-[32.5px] text-white w-[741px] mx-auto mt-[23px] text-wrap text-center ">
+      <p
+        className=" font-Gambetta xl:text-[20px] lg:text-[18px] md:text-[14px] xl:leading-[32.5px] lg:leading-[32.5px] md:leading-[20px] leading-[20px] text-white 
+      xl:w-[741px] lg:w-[741px] md:w-[741px] w-[85%] mx-auto mt-[23px] text-wrap text-center xl:px-0 px-[20px] "
+      >
         Stay updated on your visa application, job application, or any other
-        service with our <br /> real- time tracking system. Enter your
+        service with our real- time tracking system. Enter your
         Passport/National ID number to get instant updates.
       </p>
-    </div>
+    </motion.div>
   );
 };
 

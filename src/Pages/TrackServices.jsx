@@ -8,6 +8,7 @@ import { IoMdSearch } from "react-icons/io";
 import { IoCallOutline } from "react-icons/io5";
 import ContainerSec from "../components/ContainerSec";
 import NeedHelp from "../components/NeedHelp";
+import { motion } from "framer-motion";
 
 export default function TrackServices() {
   const [id, setId] = useState("");
@@ -49,40 +50,52 @@ export default function TrackServices() {
     <section>
       <TrackServicesBanner />
       <ContainerSec className=" mb-[120px] ">
-        <div className="pt-[80px] text-center">
-          <h3 className="font-G-Sans-bold text-[30px] leading-[36px] text-black">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          viewport={{ once: true }}
+          className="pt-[80px] text-center"
+        >
+          <h3 className="font-G-Sans-bold xl:text-[48px] lg:text-[38px] md:text-[28px] text-[24px] leading-[36px] text-black">
             Track Your Service
           </h3>
-          <h4 className="mt-[16px] text-[#4B5563] font-Gambetta text-[18px] leading-[28px]">
+          <h4 className="mt-[16px] text-[#4B5563] font-Gambetta text-[18px] leading-[28px] xl:px-0 lg:px-0 md:px-0 px-[20px]">
             Enter your service ID or registered email address to view the
             current status of your request
           </h4>
-        </div>
+        </motion.div>
 
-        <div className="mt-[48px] bg-transparent border-2 border-[#9CA3AF] rounded-2xl relative">
-          <div className="p-[33px]">
+        <div className="mt-[48px] bg-transparent border-2 border-[#9CA3AF] rounded-2xl xl:mx-0 mx-[50px]  relative">
+          <motion.div
+          initial={{ opacity: 0}}
+                  whileInView={{ opacity: 1}}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  viewport={{ once: true }} className="p-[24px] ">
             {!loading && (!data || !imageLoaded) && !showResult ? (
               <>
                 <form
+                  
                   onSubmit={(e) => {
                     e.preventDefault();
                     handleSearch();
                   }}
-                  className="flex items-center justify-center gap-[16px] relative"
+                  className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-row flex-col items-center justify-center gap-[16px] relative"
                   style={{ minHeight: 80 }}
                 >
                   <input
-                  id="service-id-input"
-                    className=" font-G-Sans-bold bg-[#ffffff] px-[25px] py-[19px] w-full max-w-[610px] border-2 border-[#9CA3AF] rounded-[8px]
-                      focus:outline-none focus:border-orange placeholder:text-[18px] placeholder:select-none placeholder:font-Gambetta no-arrows "
+                    id="service-id-input"
+                    className=" font-G-Sans-bold bg-[#ffffff] xl:px-[25px] xl:py-[19px] lg:px-[20px] lg:py-[16px] px-[16px] py-[12px]
+                      w-full xl:max-w-[610px] lg:max-w-[510px] md:max-w-[410px] max-w-[310px] border-2 border-[#9CA3AF] rounded-[8px]
+                      focus:outline-none focus:border-orange xl:placeholder:text-[18px] lg:placeholder:text-[16px] md:placeholder:text-[14px] placeholder:select-none placeholder:font-Gambetta no-arrows "
                     type="number"
                     placeholder="Enter Passport/NID Number"
                     onChange={(e) => setId(e.target.value)}
                   />
                   <button
                     type="submit"
-                    className="flex justify-center items-center gap-[6px] font-G-Sans text-[18px] text-white leading-[28px] tracking-[6px]
-                      bg-orange border-2 border-transparent  px-[34px] py-[17px] rounded-[8px] select-auto cursor-pointer 
+                    className="flex justify-center items-center gap-[6px] font-G-Sans xl:text-[18px] lg:text-[14px] md:text-[12px] text-[10px] text-white leading-[28px] tracking-[6px]
+                      bg-orange border-2 border-transparent xl:px-[34px] xl:py-[17px] lg:px-[30px] lg:py-[14px] md:px-[24px] md:py-[10px] px-[10px] py-[6px] rounded-[8px] cursor-pointer 
                       hover:border-orange hover:text-orange hover:bg-transparent transition-colors duration-300 ease-out select-none "
                     disabled={loading}
                   >
@@ -96,18 +109,21 @@ export default function TrackServices() {
                 </form>
 
                 <div className="mt-[24px]">
-                  <h2 className="font-Gambetta text-[14px] leading-[20px] text-[#4B5563] text-center">
+                  <h2 className="font-Gambetta xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#4B5563] text-center">
                     Need help finding your service ID? Check your email
                     confirmation or contact our support team.
                   </h2>
-                  <div className="flex items-center justify-center gap-[16px] mt-[16px]">
-                    <h3 className="flex items-center justify-center gap-[6px] text-[14px] leading-[20px] text-[#4B5563]">
-                      <IoCallOutline className="text-[14px]" />
-                      +1 (234) 567-890
+                  <div
+                    className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-row flex-col items-center justify-center
+                   xl:gap-[16px] lg:gap-[16px] md:gap-[12px] gap-[4px] xl:mt-[16px] lg:mt-[16px] md:mt-[16px] mt-[18px] "
+                  >
+                    <h3 className="flex items-center justify-center gap-[6px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#4B5563]">
+                      <IoCallOutline className="xl:text-[14px] lg:text-[12px] md:text-[10px]" />
+                      +880 182 5419803
                     </h3>
-                    <h4 className="flex items-center justify-center gap-[6px] text-[14px] leading-[20px] text-[#4B5563]">
-                      <CiMail className="text-[14px]" />
-                      support@mrs.com
+                    <h4 className="flex items-center justify-center gap-[6px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#4B5563]">
+                      <CiMail className="xl:text-[14px] lg:text-[12px] md:text-[10px]" />
+                      moonrajchowdhury@gmail.com
                     </h4>
                   </div>
                 </div>
@@ -120,7 +136,7 @@ export default function TrackServices() {
                 Loading...
               </div>
             )}
-          </div>
+          </motion.div>
 
           {/* Preload image but keep hidden until loaded */}
           {data && !imageLoaded && (
