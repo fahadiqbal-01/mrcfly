@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Container from "./Container";
 import List from "./List";
 import ListItems from "./ListItems";
@@ -10,22 +10,31 @@ import { RiMenu5Line } from "react-icons/ri";
 const activeClass = "text-blue-800 font-G-Sans font-bold"; // Only color and font, no border
 
 const Navbar = () => {
-  const [handleToogle, sethandleToogle] = React.useState(false);
-  const handleToogleChangeBack = () => {
-    sethandleToogle(true);
-  };
-  const handleToogleChange = () => {
-    sethandleToogle(!handleToogle);
-  };
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navRef = useRef(null);
+
   const handleClose = () => {
-    sethandleToogle(false);
+    setIsMenuOpen(false);
   };
   const handleToggle = () => {
-    sethandleToogle(!handleToogle);
+    setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        handleClose();
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isMenuOpen]);
+
   return (
-    <nav className="py-[16px] bg-[#FFFFFF] relative ">
+    <nav ref={navRef} className="py-[16px] bg-[#FFFFFF] relative ">
       <Container className="flex flex-row items-center justify-between ">
         <NavLink to="/">
           <motion.img
@@ -42,7 +51,7 @@ const Navbar = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           className={` ${
-            handleToogle
+            isMenuOpen
               ? "block absolute left-0 top-[70px] bg-[#ffffff] pb-[36px] z-50 "
               : " xl:flex lg:flex md:flex sm:hidden hidden"
           }   items-center justify-end w-full 
@@ -146,14 +155,8 @@ const Navbar = () => {
           onClick={handleToggle}
           className=" xl:hidden lg:hidden md:hidden block xl:mr-0 lg:mr-0 md:mr-0 sm:mr-0 mr-[20px] "
         >
-          <RiMenu5Line
-            onClick={handleToogleChange}
-            className={` ${handleToogle ? "block" : "hidden"} text-[28px]`}
-          />
-          <AiOutlineMenu
-            onClick={handleToogleChangeBack}
-            className={` ${handleToogle ? "hidden" : "block"} text-[28px] `}
-          />
+          <RiMenu5Line className={` ${isMenuOpen ? "block" : "hidden"} text-[28px]`} />
+          <AiOutlineMenu className={` ${isMenuOpen ? "hidden" : "block"} text-[28px] `} />
         </motion.button>
       </Container>
     </nav>
