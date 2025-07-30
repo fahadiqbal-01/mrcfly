@@ -1,8 +1,16 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const NeedHelp = () => {
   return (
-    <div id="NeedHelp" className=" text-center py-[80px] ">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      viewport={{ once: true }}
+      id="NeedHelp"
+      className=" text-center py-[80px] "
+    >
       <div>
         <h2 className=" font-G-Sans-bold xl:text-[48px] lg:text-[38px] md:text-[28px] text-[24px] leading-[40px] text-orange ">
           Need Help?
@@ -25,7 +33,7 @@ const NeedHelp = () => {
       >
         Contact Support
       </a>
-    </div>
+    </motion.div>
   );
 };
 

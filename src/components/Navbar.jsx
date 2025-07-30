@@ -38,9 +38,9 @@ const Navbar = () => {
           />
         </NavLink>
         <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, ease: "easeInOut" }}
+          initial={{ opacity: 0}}
+          whileInView={{ opacity: 1}}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className={` ${
             handleToogle
               ? "block absolute left-0 top-[70px] bg-[#ffffff] pb-[36px] z-50 "
@@ -141,7 +141,6 @@ const Navbar = () => {
           initial={{ opacity: 0, y: -10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          viewport={{ once: true }}
           onClick={handleToggle}
           className=" xl:hidden lg:hidden md:hidden block xl:mr-0 lg:mr-0 md:mr-0 sm:mr-0 mr-[20px] "
         >
