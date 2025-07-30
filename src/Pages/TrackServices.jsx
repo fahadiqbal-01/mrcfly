@@ -96,8 +96,8 @@ export default function TrackServices() {
             Track Your Service
           </h3>
           <h4 className="mt-[16px] text-[#4B5563] font-Gambetta text-[18px] leading-[28px] xl:px-0 lg:px-0 md:px-0 px-[20px]">
-            Enter your service ID or registered email address to view the
-            current status of your request
+            Enter your Passport or National ID number to view the current status
+            of your request
           </h4>
         </motion.div>
 
@@ -147,8 +147,8 @@ export default function TrackServices() {
 
                 <div className="mt-[24px]">
                   <h2 className="font-Gambetta xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#4B5563] text-center">
-                    Need help finding your service ID? Check your email
-                    confirmation or contact our support team.
+                    <b>Need help with any of our services?</b> <br />
+                    Just reach out to our support team — we’re here for you!
                   </h2>
                   <div
                     className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-row flex-col items-center justify-center

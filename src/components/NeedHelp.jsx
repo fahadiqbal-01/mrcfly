@@ -2,6 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const NeedHelp = () => {
+  const whatsappRedirect =
+    "https://wa.me/8801825419803?text=Hi%2C%20I%27m%20interested%20in%20your%20services.%20Could%20you%20help%20me%20find%20the%20best%20option%3F";
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -25,8 +28,9 @@ const NeedHelp = () => {
       </div>
 
       <a
-        href="https://wa.me/8801825419803?text=Hi%2C%20I%27m%20interested%20in%20your%20services.%20Could%20you%20help%20me%20find%20the%20best%20option%3F"
+        href={whatsappRedirect}
         target="_blank"
+        rel="noopener noreferrer"
         className=" inline-block bg-orange xl:px-[32px] xl:py-[18px] lg:px-[28px] lg:py-[14px] md:px-[24px] md:py-[10px] px-[10px]
          py-[10px]] border-2 border-transparent rounded-[8px] xl:text-[18px] lg:text-[14px] md:text-[12px]
          text-[#ffffff] leading-[28px] mt-[32px] sm:mt-[18px] hover:bg-transparent hover:text-orange hover:border-orange duration-200 ease-out select-none "
