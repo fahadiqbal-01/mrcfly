@@ -70,6 +70,7 @@ const Navbar = () => {
               )}
             </NavLink>
             <NavLink
+            onClick={handleClose}
               to="/jobapplication"
               className={({ isActive }) => (isActive ? activeClass : undefined)}
             >
