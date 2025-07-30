@@ -21,7 +21,7 @@ const TrackServicesBanner = () => {
         className=" font-Gambetta xl:text-[20px] lg:text-[18px] md:text-[14px] xl:leading-[32.5px] lg:leading-[32.5px] md:leading-[20px] leading-[20px] text-white 
       xl:w-[741px] lg:w-[741px] md:w-[741px] w-[85%] mx-auto mt-[23px] text-wrap text-center xl:px-0 px-[20px] "
       >
-        Stay updated on your visa application, job application, or any other
+        Stay updated on your visa application, job application or any other
         service with our real- time tracking system. Enter your
         Passport/National ID number to get instant updates.
       </p>
