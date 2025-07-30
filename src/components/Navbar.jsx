@@ -29,8 +29,8 @@ const Navbar = () => {
       <Container className="flex flex-row items-center justify-between ">
         <NavLink to="/">
           <motion.img
-            initial={{ opacity: 0, y: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             src="/images/logomrc.png"
             alt="weblogo"
@@ -38,8 +38,8 @@ const Navbar = () => {
           />
         </NavLink>
         <motion.div
-          initial={{ opacity: 0}}
-          whileInView={{ opacity: 1}}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
           className={` ${
             handleToogle
@@ -138,8 +138,8 @@ const Navbar = () => {
           </div>
         </motion.div>
         <motion.button
-          initial={{ opacity: 0, y: -10 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
           onClick={handleToggle}
           className=" xl:hidden lg:hidden md:hidden block xl:mr-0 lg:mr-0 md:mr-0 sm:mr-0 mr-[20px] "

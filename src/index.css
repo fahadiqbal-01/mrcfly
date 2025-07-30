@@ -40,7 +40,7 @@ html {
 }
 
 #NeedHelp {
-  background: url(../public/images/banner.png) ;
+  background: url(../public/images/banner.png);
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -55,8 +55,12 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-body{
+html,
+body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+}
+body {
+  background-color: #ffffff;
 }

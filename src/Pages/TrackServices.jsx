@@ -9,6 +9,7 @@ import { IoCallOutline } from "react-icons/io5";
 import ContainerSec from "../components/ContainerSec";
 import NeedHelp from "../components/NeedHelp";
 import { motion } from "framer-motion";
+import Toastify from "toastify-js";
 
 export default function TrackServices() {
   const [id, setId] = useState("");
@@ -19,7 +20,23 @@ export default function TrackServices() {
 
   const handleSearch = async () => {
     if (!id.trim()) {
-      alert("Please enter an ID number");
+      Toastify({
+        text: "Please enter your Passport/National ID number.",
+        duration: 3000,
+        newWindow: true,
+        close: true,
+        gravity: "bottom", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "#f67a1b", // Red background
+          color: "#ffffff", // White text
+          fontFamily: "Gsans, sans-serif", // Custom font
+          fontSize: "16px", // Font size// Orange border
+          borderRadius: "8px", // Rounded corners
+        },
+        onClick: function () {}, // Callback after click
+      }).showToast();
       return;
     }
     setLoading(true);
@@ -32,7 +49,26 @@ export default function TrackServices() {
     } else {
       setData(null);
       setLoading(false);
-      alert("ID not found.");
+      setId("");
+        Toastify({
+        text: "ID not found. Please check your Passport/National ID number.",
+        duration: 3000,
+        newWindow: true,
+        close: true,
+        gravity: "bottom", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "#f67a1b", // Red background
+          color: "#ffffff", // White text
+          fontFamily: "Gsans, sans-serif", // Custom font
+          fontSize: "16px", // Font size// Orange border
+          borderRadius: "8px", // Rounded corners
+        },
+        onClick: function () {}, // Callback after click
+      }).showToast();
+      return;
+    
     }
   };
 
@@ -47,7 +83,7 @@ export default function TrackServices() {
   };
 
   return (
-    <section>
+    <section className=" bg-[#ffffff] ">
       <TrackServicesBanner />
       <ContainerSec className=" mb-[120px] ">
         <motion.div
@@ -68,14 +104,15 @@ export default function TrackServices() {
 
         <div className="mt-[48px] bg-transparent border-2 border-[#9CA3AF] rounded-2xl xl:mx-0 mx-[50px]  relative">
           <motion.div
-          initial={{ opacity: 0}}
-                  whileInView={{ opacity: 1}}
-                  transition={{ duration: 0.5, ease: "easeInOut" }}
-                  viewport={{ once: true }} className="p-[24px] ">
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            viewport={{ once: true }}
+            className="p-[24px] "
+          >
             {!loading && (!data || !imageLoaded) && !showResult ? (
               <>
                 <form
-                  
                   onSubmit={(e) => {
                     e.preventDefault();
                     handleSearch();
@@ -89,6 +126,7 @@ export default function TrackServices() {
                       w-full xl:max-w-[610px] lg:max-w-[510px] md:max-w-[410px] max-w-[310px] border-2 border-[#9CA3AF] rounded-[8px]
                       focus:outline-none focus:border-orange xl:placeholder:text-[18px] lg:placeholder:text-[16px] md:placeholder:text-[14px] placeholder:select-none placeholder:font-Gambetta no-arrows "
                     type="number"
+                    value={id}
                     placeholder="Enter Passport/NID Number"
                     onChange={(e) => setId(e.target.value)}
                   />
