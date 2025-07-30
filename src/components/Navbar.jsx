@@ -46,10 +46,7 @@ const Navbar = () => {
             className=" h-[44px] pl-[15px] select-none  "
           />
         </NavLink>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+        <div
           className={` ${
             isMenuOpen
               ? "block absolute left-0 top-[70px] bg-[#ffffff] pb-[36px] z-50 "
@@ -148,7 +145,7 @@ const Navbar = () => {
               Free Consultation
             </a>
           </div>
-        </motion.div>
+        </div>
         <motion.button
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
