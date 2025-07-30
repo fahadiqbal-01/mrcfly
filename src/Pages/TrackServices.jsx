@@ -50,7 +50,7 @@ export default function TrackServices() {
       setData(null);
       setLoading(false);
       setId("");
-        Toastify({
+      Toastify({
         text: "ID not found. Please check your Passport/National ID number.",
         duration: 3000,
         newWindow: true,
@@ -68,7 +68,6 @@ export default function TrackServices() {
         onClick: function () {}, // Callback after click
       }).showToast();
       return;
-    
     }
   };
 
@@ -102,14 +101,14 @@ export default function TrackServices() {
           </h4>
         </motion.div>
 
-        <div className="mt-[48px] bg-transparent border-2 border-[#9CA3AF] rounded-2xl xl:mx-0 mx-[50px]  relative">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            viewport={{ once: true }}
-            className="p-[24px] "
-          >
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className="mt-[48px] bg-transparent border-2 border-[#9CA3AF] rounded-2xl xl:mx-0 mx-[50px]  relative"
+        >
+          <div className="p-[24px] ">
             {!loading && (!data || !imageLoaded) && !showResult ? (
               <>
                 <form
@@ -174,7 +173,7 @@ export default function TrackServices() {
                 Loading...
               </div>
             )}
-          </motion.div>
+          </div>
 
           {/* Preload image but keep hidden until loaded */}
           {data && !imageLoaded && (
@@ -251,7 +250,7 @@ export default function TrackServices() {
               </div>
             </div>
           )}
-        </div>
+        </motion.div>
       </ContainerSec>
 
       <NeedHelp />

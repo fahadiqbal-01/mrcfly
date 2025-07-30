@@ -3,7 +3,6 @@ import Container from "./Container";
 import { IoCallOutline, IoLocationOutline } from "react-icons/io5";
 import { CiMail } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 
 const footerLinkItemClass = "xl:mt-[8px] lg:mt-[2px] md:mt-0 mt-[-4px] ";
 const footerLinkClass =
@@ -11,11 +10,7 @@ const footerLinkClass =
 
 const Footer = () => {
   return (
-    <motion.footer
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
-      viewport={{ once: true }}
+    <footer
       className=" bg-black "
     >
       <Container>
@@ -102,7 +97,7 @@ const Footer = () => {
           </p>
         </div>
       </Container>
-    </motion.footer>
+    </footer>
   );
 };
 
