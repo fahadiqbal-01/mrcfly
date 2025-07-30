@@ -1,5 +1,5 @@
 // src/pages/SearchStatus.jsx
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { db } from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
 import TrackServicesBanner from "../components/TrackServicesBanner";
@@ -10,8 +10,19 @@ import ContainerSec from "../components/ContainerSec";
 import NeedHelp from "../components/NeedHelp";
 import { motion } from "framer-motion";
 import Toastify from "toastify-js";
+import lottie from "lottie-web";
 
 export default function TrackServices() {
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: document.getElementById("paperplane-animation"),
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      path: "/images/Paperplane.json",
+    });
+  }, []);
+
   const [id, setId] = useState("");
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -82,7 +93,7 @@ export default function TrackServices() {
   };
 
   return (
-    <section className=" bg-[#ffffff] ">
+    <section id="track-mid" className=" bg-[#ffffff] ">
       <TrackServicesBanner />
       <ContainerSec className=" mb-[120px] ">
         <motion.div
@@ -139,9 +150,10 @@ export default function TrackServices() {
                     <IoMdSearch className="text-[22px]" /> Track
                   </button>
                   {loading && (
-                    <div>
-                      <img src="images/plane.gif" alt="" />
-                    </div>
+                    <div
+                      id="paperplane-animation"
+                      style={{ width: 300, height: 300 }}
+                    />
                   )}
                 </form>
 
@@ -169,8 +181,12 @@ export default function TrackServices() {
 
             {/* Show loading while fetching and image not loaded */}
             {loading && (
-              <div className="text-center py-8 text-lg font-bold">
-                Loading...
+              <div className=" flex justify-center items-center ">
+                <img
+                  src="images/Paperplane.gif"
+                  alt="planeLoadingAnimation"
+                  className=" w-[250px] "
+                />
               </div>
             )}
           </div>
