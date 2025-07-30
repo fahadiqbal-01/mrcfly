@@ -128,13 +128,15 @@ const Navbar = () => {
             </NavLink>
           </List>
           <div className="flex justify-center items-center gap-[16px]">
-            <button
+            <a
+              href="https://wa.me/8801825419803?text=Hi%2C%20I%27m%20interested%20in%20your%20services.%20Could%20you%20help%20me%20find%20the%20best%20option%3F"
+              target="_blank"
               className="font-G-Sans px-[24px] py-[8px] xl:text-[14px] lg:text-[10px] md:text-[8px] xl:mt-0 lg:mt-0 md:mt-0 sm:mt-[18px] mt-[18px] 
                rounded-[8px] text-white bg-orange border-4 border-transparent hover:bg-transparent 
           hover:border-orange hover:text-orange duration-200 ease-out select-none cursor-pointer"
             >
               Free Consultation
-            </button>
+            </a>
           </div>
         </motion.div>
         <motion.button
