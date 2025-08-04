@@ -15,27 +15,33 @@ import Services from "./Pages/Services";
 import WorkPermit from "./Pages/WorkPermit";
 import StudentVisa from "./Pages/StudentVisa";
 import Touristvisa from "./Pages/Touristvisa";
+import NotFound from "./Pages/NotFound";
 
 function App() {
-
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<RootLayout />}>
-        <Route index element={<TrackServices />} />
-        <Route path="adminmrc" element={<AdminUpload />} />
-        <Route path="login" element={<AdminLogin />} />
-        <Route path="jobapplication" element={<JobApplications />} />
-        <Route path="home" element={<Home />} />
-        <Route path="services" element={<Services />} />
-        <Route path="workpermit" element={<WorkPermit />} />
-        <Route path="studentvisa" element={<StudentVisa />} />
-        <Route path="touristvisa" element={<Touristvisa />} />
-      </Route>
+      <>
+        {" "}
+        <Route path="/" element={<RootLayout />}>
+          <Route index element={<TrackServices />} />
+          <Route path="adminmrc" element={<AdminUpload />} />
+          <Route path="login" element={<AdminLogin />} />
+          <Route path="jobapplication" element={<JobApplications />} />
+          <Route path="home" element={<Home />} />
+          <Route path="services" element={<Services />} />
+          <Route path="workpermit" element={<WorkPermit />} />
+          <Route path="studentvisa" element={<StudentVisa />} />
+          <Route path="touristvisa" element={<Touristvisa />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </>
     )
   );
 
   return (
-    <RouterProvider router={router} />
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 }
 
