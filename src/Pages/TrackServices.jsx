@@ -83,13 +83,11 @@ export default function TrackServices() {
   };
 
   // Hide popup when clicking outside
-  const handleBackdropClick = (e) => {
-    if (e.target.id === "result-backdrop") {
-      setShowResult(false);
-      setData(null);
-      setImageLoaded(false);
-      setId("");
-    }
+  const handleCloseResult = (e) => {
+    setShowResult(false);
+    setData(null);
+    setImageLoaded(false);
+    setId("");
   };
 
   return (
@@ -120,42 +118,91 @@ export default function TrackServices() {
           className="mt-[48px] bg-transparent border-2 border-[#9CA3AF] rounded-2xl xl:mx-0 mx-[50px]  relative"
         >
           <div className="p-[24px] ">
-            {!loading && (!data || !imageLoaded) && !showResult ? (
+            {!loading && (
               <>
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    handleSearch();
-                  }}
-                  className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-row flex-col items-center justify-center gap-[16px] relative"
-                  style={{ minHeight: 80 }}
-                >
-                  <input
-                    id="service-id-input"
-                    className=" font-G-Sans-bold bg-[#ffffff] xl:px-[25px] xl:py-[19px] lg:px-[20px] lg:py-[16px] px-[16px] py-[12px]
-                      w-full xl:max-w-[610px] lg:max-w-[510px] md:max-w-[410px] max-w-[310px] border-2 border-[#9CA3AF] rounded-[8px]
-                      focus:outline-none focus:border-orange xl:placeholder:text-[18px] lg:placeholder:text-[16px] md:placeholder:text-[14px] placeholder:select-none placeholder:font-Gambetta no-arrows "
-                    type="number"
-                    value={id}
-                    placeholder="Enter Passport/NID Number"
-                    onChange={(e) => setId(e.target.value)}
-                  />
-                  <button
-                    type="submit"
-                    className="flex justify-center items-center gap-[6px] font-G-Sans xl:text-[18px] lg:text-[14px] md:text-[12px] text-[10px] text-white leading-[28px] tracking-[6px]
-                      bg-orange border-2 border-transparent xl:px-[34px] xl:py-[17px] lg:px-[30px] lg:py-[14px] md:px-[24px] md:py-[10px] px-[10px] py-[6px] rounded-[8px] cursor-pointer 
-                      hover:border-orange hover:text-orange hover:bg-transparent transition-colors duration-300 ease-out select-none "
-                    disabled={loading}
+                {!data || !imageLoaded || !showResult ? (
+                  <form
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      handleSearch();
+                    }}
+                    className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-row flex-col items-center justify-center gap-[16px] relative"
+                    style={{ minHeight: 80 }}
                   >
-                    <IoMdSearch className="text-[22px]" /> Track
-                  </button>
-                  {loading && (
-                    <div
-                      id="paperplane-animation"
-                      style={{ width: 300, height: 300 }}
+                    <input
+                      id="service-id-input"
+                      className=" font-G-Sans-bold bg-[#ffffff] xl:px-[25px] xl:py-[19px] lg:px-[20px] lg:py-[16px] px-[16px] py-[12px]
+          w-full xl:max-w-[610px] lg:max-w-[510px] md:max-w-[410px] max-w-[310px] border-2 border-[#9CA3AF] rounded-[8px]
+          focus:outline-none focus:border-orange xl:placeholder:text-[18px] lg:placeholder:text-[16px] md:placeholder:text-[14px] placeholder:select-none placeholder:font-Gambetta no-arrows "
+                      type="number"
+                      value={id}
+                      placeholder="Enter Passport/NID Number"
+                      onChange={(e) => setId(e.target.value)}
                     />
-                  )}
-                </form>
+                    <button
+                      type="submit"
+                      className="flex justify-center items-center gap-[6px] font-G-Sans xl:text-[18px] lg:text-[14px] md:text-[12px] text-[10px] text-white leading-[28px] tracking-[6px]
+            bg-orange border-2 border-transparent xl:px-[34px] xl:py-[17px] lg:px-[30px] lg:py-[14px] md:px-[24px] md:py-[10px] px-[10px] py-[6px] rounded-[8px] cursor-pointer 
+            hover:border-orange hover:text-orange hover:bg-transparent transition-colors duration-300 ease-out select-none "
+                      disabled={loading}
+                    >
+                      <IoMdSearch className="text-[22px]" /> Track
+                    </button>
+                  </form>
+                ) : (
+                  <div id="result" className="w-full mx-auto bg-transparent border border-gray-200 rounded-lg shadow-sm ">
+                    <div className="flex flex-col items-center py-10 relative ">
+                      <img
+                        className="w-32 mb-3 rounded-lg shadow-lg"
+                        src={data.imageUrl}
+                        alt="Bonnie image"
+                      />
+                      <h5 className="mb-1 text-xl font-medium text-gray-900 ">
+                        {data.name}
+                      </h5>
+                      <span className="text-sm text-gray-500 ">
+                        {data.serviceType}
+                      </span>
+                      <span className="text-sm text-gray-500 ">
+                        Last Updated: {data.date}
+                      </span>
+                      <span className="text-sm text-[#000000] w-[70%] text-center ">
+                        {data.shortNote}
+                      </span>
+                      <div className="flex mt-4 md:mt-6">
+                        {data.status === "Complete" ? (
+                          <div>
+                            <h2 className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-green-700 bg-green-200 rounded-lg ">
+                              {data.status}
+                            </h2>
+                            <a
+                              href={data.driveLink}
+                              target="_blank"
+                              className="py-2 px-4 ms-2 text-sm font-medium text-orange focus:outline-none bg-white rounded-lg border border-orange
+                               hover:bg-orange hover:text-white duration-300 ease-out "
+                            >
+                              Download
+                            </a>
+                          </div>
+                        ) : (
+                          <a className="py-2 px-4 ms-2 text-sm font-medium text-blue-700 focus:outline-none bg-blue-300 rounded-lg border border-blue-700 ">
+                            {data.status}
+                          </a>
+                        )}
+                      </div>
+                      <button
+                        onClick={handleCloseResult}
+                        className=" absolute top-3 right-4 text-red-600 border-2 border-transparent px-[8px] py-[4px] rounded-lg 
+                        hover:bg-red-600 hover:text-white duration-300 ease-out cursor-pointer "
+                      >
+                        Close
+                      </button>
+                      <div>
+
+                      </div>
+                    </div>
+                  </div>
+                )}
 
                 <div className="mt-[24px]">
                   <h2 className="font-Gambetta xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#4B5563] text-center">
@@ -164,7 +211,7 @@ export default function TrackServices() {
                   </h2>
                   <div
                     className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-row flex-col items-center justify-center
-                   xl:gap-[16px] lg:gap-[16px] md:gap-[12px] gap-[4px] xl:mt-[16px] lg:mt-[16px] md:mt-[16px] mt-[18px] "
+        xl:gap-[16px] lg:gap-[16px] md:gap-[12px] gap-[4px] xl:mt-[16px] lg:mt-[16px] md:mt-[16px] mt-[18px] "
                   >
                     <h3 className="flex items-center justify-center gap-[6px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#4B5563]">
                       <IoCallOutline className="xl:text-[14px] lg:text-[12px] md:text-[10px]" />
@@ -177,9 +224,8 @@ export default function TrackServices() {
                   </div>
                 </div>
               </>
-            ) : null}
+            )}
 
-            {/* Show loading while fetching and image not loaded */}
             {loading && (
               <div className=" flex justify-center items-center ">
                 <img
@@ -191,7 +237,6 @@ export default function TrackServices() {
             )}
           </div>
 
-          {/* Preload image but keep hidden until loaded */}
           {data && !imageLoaded && (
             <img
               src={data.imageUrl}
@@ -203,67 +248,6 @@ export default function TrackServices() {
                 setShowResult(true);
               }}
             />
-          )}
-
-          {/* Popup result card */}
-          {showResult && !loading && data && imageLoaded && (
-            <div
-              id="result-backdrop"
-              onClick={handleBackdropClick}
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
-            >
-              <div
-                className="bg-transparent backdrop-blur-2xl border-2 border-orange rounded-2xl shadow-2xl p-8 flex flex-col items-center justify-center animate-popup"
-                style={{
-                  minWidth: "320px",
-                  maxWidth: "95vw",
-                  width: "400px",
-                  transition: "all 0.3s ease-out",
-                }}
-                onClick={(e) => e.stopPropagation()}
-              >
-                <img
-                  src={data.imageUrl}
-                  alt="client_image"
-                  className="w-[120px] h-[120px] object-cover rounded-xl mb-4 shadow"
-                />
-                <h2 className="font-G-Sans-bold text-[28px] text-[#ffffff] mt-2 text-center">
-                  {data.name}
-                </h2>
-                <div className="flex flex-col gap-2 mt-4 justify-center items-center">
-                  <h3 className="font-Gambetta text-[18px] text-gray-200">
-                    {data.serviceType}
-                  </h3>
-                  <h4 className="font-Gambetta text-[18px] text-gray-200">
-                   Last update: {data.date}
-                  </h4>
-                </div>
-                <h3 className="font-Gambetta text-[18px] text-[#ffffff] leading-[28px] mt-4 text-center">
-                  {data.shortNote}
-                </h3>
-                <div className="mt-6">
-                  {data.status === "Complete" ? (
-                    <div className=" flex flex-wrap gap-[16px] ">
-                      <span className="bg-[#DCFCE7] font-Gambetta text-[16px] text-green px-[16px] py-[8px] rounded-xl select-none ">
-                        Status: {data.status}
-                      </span>
-                      <a
-                        href={data.driveLink}
-                        target="blank"
-                        className=" font-Gambetta text-[16px] text-[#ffffff] bg-orange px-[16px] py-[8px] border-2 border-transparent
-                       rounded-xl hover:bg-transparent hover:border-orange hover:text-orange duration-200 ease-out cursor-default select-none z-50 "
-                      >
-                        Download
-                      </a>
-                    </div>
-                  ) : (
-                    <span className="bg-[#DBEAFE] font-Gambetta text-[16px] text-[#1E40AF] px-[16px] py-[8px] rounded-xl">
-                      Status: {data.status}
-                    </span>
-                  )}
-                </div>
-              </div>
-            </div>
           )}
         </motion.div>
       </ContainerSec>
