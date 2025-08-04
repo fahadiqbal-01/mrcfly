@@ -210,7 +210,7 @@ export default function TrackServices() {
             <div
               id="result-backdrop"
               onClick={handleBackdropClick}
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
             >
               <div
                 className="bg-transparent backdrop-blur-2xl border-2 border-orange rounded-2xl shadow-2xl p-8 flex flex-col items-center justify-center animate-popup"
@@ -230,13 +230,12 @@ export default function TrackServices() {
                 <h2 className="font-G-Sans-bold text-[28px] text-[#ffffff] mt-2 text-center">
                   {data.name}
                 </h2>
-                <div className="flex gap-2 mt-4 justify-center items-center">
+                <div className="flex flex-col gap-2 mt-4 justify-center items-center">
                   <h3 className="font-Gambetta text-[18px] text-gray-200">
                     {data.serviceType}
                   </h3>
-                  <span className="text-gray-400">|</span>
                   <h4 className="font-Gambetta text-[18px] text-gray-200">
-                    {data.date}
+                   Last update: {data.date}
                   </h4>
                 </div>
                 <h3 className="font-Gambetta text-[18px] text-[#ffffff] leading-[28px] mt-4 text-center">

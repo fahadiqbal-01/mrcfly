@@ -14,11 +14,14 @@ const Footer = () => {
       <Container>
         <div className=" grid grid-cols-4 pt-[48px] pb-[32px] border-b-2 border-[#1F2937] xl:px-0 lg:px-0 md:px-0 px-[20px] ">
           <div className=" col-span-2 ">
-            <img
-              src="/images/logomrc.png"
-              alt="mrclogo"
-              className=" xl:w-[100px] lg:w-[80px] md:w-[60px] w-[76px] xl:mb-[16px] lg:mb-[12px] md:mb-[8px] mb-[4px]  "
-            />
+            <Link to="/">
+              <img
+                src="/images/logomrcsec.png"
+                alt="mrclogo"
+                className=" xl:w-[100px] lg:w-[80px] md:w-[60px] w-[76px] xl:mb-[16px] lg:mb-[12px] md:mb-[8px] mb-[4px]  "
+              />
+            </Link>
+
             <p className=" text-[#9CA3AF] xl:text-[16px] lg:text-[12px] text-[10px] xl:leading-[24px] lg:leading-[16px] leading-[14px] font-Gsans xl:w-[570px] lg:w-[440px] md:w-[320px] sm:w-[240px] w-[150px] ">
               Your trusted partner for job applications, work permits, student
               visas, and tourist visa services — providing expert guidance,
