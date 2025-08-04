@@ -135,7 +135,7 @@ export default function TrackServices() {
                     className=" font-G-Sans-bold bg-[#ffffff] xl:px-[25px] xl:py-[19px] lg:px-[20px] lg:py-[16px] px-[16px] py-[12px]
                       w-full xl:max-w-[610px] lg:max-w-[510px] md:max-w-[410px] max-w-[310px] border-2 border-[#9CA3AF] rounded-[8px]
                       focus:outline-none focus:border-orange xl:placeholder:text-[18px] lg:placeholder:text-[16px] md:placeholder:text-[14px] placeholder:select-none placeholder:font-Gambetta no-arrows "
-                    type="number"
+                    type="text"
                     value={id}
                     placeholder="Enter Passport/NID Number"
                     onChange={(e) => setId(e.target.value)}
