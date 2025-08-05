@@ -17,9 +17,10 @@ const TrackServicesBanner = () => {
         <source src="video/trackvid2.mp4" type="video/mp4" />
       </video>
       <Link
-        to="#track-mid-sec"
+        to="#mid-form-top"
         smooth
-        className=" text-[26px] text-white absolute left-4 top-4 px-[16px] py-[8px] bg-black/60 backdrop-blur-sm rounded-lg flex items-center gap-[6px] "
+        className=" xl:text-[26px] lg:text-[23px] md:text-[20px] sm:text-[17px] text-[14px] text-white absolute left-4 top-4 
+        xl:px-[16px] xl:py-[8px] lg:px-[12px] lg:py-[6px] md:px-[8px] md:py-[4px] px-[6px] py-[3px] bg-black/60 backdrop-blur-sm rounded-lg flex items-center gap-[6px] "
       >
         <GiClick />
         Track your services
