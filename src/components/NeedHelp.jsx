@@ -31,7 +31,7 @@ const NeedHelp = () => {
         target="_blank"
         rel="noopener noreferrer"
         className=" inline-block bg-orange xl:px-[32px] xl:py-[18px] lg:px-[28px] lg:py-[14px] md:px-[24px] md:py-[10px] px-[10px]
-         py-[10px]] border-2 border-transparent rounded-[8px] xl:text-[18px] lg:text-[14px] md:text-[12px] text-[10px] text-[#ffffff] leading-[28px] 
+         py-[10px]] border-2 border-transparent rounded-[8px] xl:text-[18px] lg:text-[14px] md:text-[12px] text-[#ffffff] leading-[28px] 
          xl:mt-[22px] lg:mt-[18px] md:mt-[14px] mt-[12px] hover:bg-transparent hover:text-white hover:border-orange duration-200 ease-out select-none relative z-50 "
       >
         Contact Support

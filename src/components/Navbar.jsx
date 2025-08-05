@@ -52,9 +52,9 @@ const Navbar = () => {
               ? "block absolute left-0 top-[70px] bg-[#ffffff] pb-[36px] z-50 "
               : " xl:flex lg:flex md:flex sm:hidden hidden"
           }   items-center justify-end w-full 
-        xl:gap-[120px] lg:gap-[100px] md:gap-[50px] sm:gap-[40px] gap-[20px] `}
+        xl:gap-[120px] lg:gap-[100px] md:gap-[60px] sm:gap-[40px] gap-[20px] `}
         >
-          <List className="xl:lg:md:gap-[24px] sm:gap-[12px] gap-[8px]">
+          <List className="xl:gap-[24px] lg:gap-[24px] md:gap-[24px] sm:gap-[12px] gap-[8px]">
             <NavLink
               onClick={handleClose}
               to="/home"
