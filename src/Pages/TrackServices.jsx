@@ -292,7 +292,7 @@ export default function TrackServices() {
             </h3>
             <h4 className="flex items-center justify-center gap-[6px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#000000]">
               <CiMail className="xl:text-[14px] lg:text-[12px] md:text-[10px]" />
-              moonrajchowdhury@gmail.com
+              info@mrcfly.com
             </h4>
           </div>
         </div>

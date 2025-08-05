@@ -88,15 +88,18 @@ const Footer = () => {
               </h3>
               <h4 className="flex items-center justify-center gap-[6px] font-Gsans xl:text-[14px] text-[10px] leading-[20px] text-[#9CA3AF] ">
                 <CiMail className="xl:text-[14px]  md:text-[8px]" />
-                moonrajchowdhury@gmail.com
+                info@mrcfly.com
               </h4>
             </div>
           </div>
         </div>
-        <div className=" pt-[33px] pb-[48px] flex justify-center items-center  ">
+        <div className=" pt-[33px] pb-[48px] flex flex-col justify-center items-center  ">
           <p className=" text-[#9CA3AF] xl:text-[14px] lg:text-[12px] text-[10px] ">
             © 2025 MRC. All rights reserved.
           </p>
+           {/* <p className=" text-[#9CA3AF] xl:text-[14px] lg:text-[12px] text-[10px] mt-[6px] ">
+            Made by <a href="" className=" text-orange select-none  " >Fahad Iqbal</a>
+          </p> */}
         </div>
       </Container>
     </footer>
