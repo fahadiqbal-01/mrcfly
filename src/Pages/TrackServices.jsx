@@ -15,6 +15,7 @@ import Container from "../components/Container";
 import { AiOutlineGlobal } from "react-icons/ai";
 import { VscServerProcess } from "react-icons/vsc";
 import { FaCloudDownloadAlt } from "react-icons/fa";
+import TrackServicesBannerSec from "../components/TrackServicesBannerSec";
 
 export default function TrackServices() {
   useEffect(() => {
@@ -97,6 +98,7 @@ export default function TrackServices() {
   return (
     <section id="track-mid" className=" bg-[#ffffff] ">
       <TrackServicesBanner />
+      <TrackServicesBannerSec />
       <Container className=" mb-[120px] ">
         <motion.div
           initial={{ opacity: 0 }}
@@ -119,16 +121,16 @@ export default function TrackServices() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="mt-[48px] bg-transparent border-2 border-[#9CA3AF] rounded-2xl xl:mx-0 mx-[10px] relative"
+          className="mt-[48px] bg-transparent border-2 border-white rounded-2xl xl:mx-0 mx-[10px] relative"
         >
           <div
             id="track-mid-form"
             className=" w-full px-[24px] py-[78px] rounded-xl "
           >
             <img
-              src="images/logomrc.png"
+              src="images/logomrcsec.png"
               alt=""
-              className=" w-[50px] absolute left-3 bottom-3 "
+              className=" w-[50px] absolute left-3 top-3 "
             />
             {!loading && (
               <>
@@ -162,13 +164,16 @@ export default function TrackServices() {
                   </form>
                 ) : (
                   <div className=" w-full mx-auto py-4 overflow-hidden ">
-                    <div className="flex flex-col lg:flex-row bg-white rounded-xl shadow-md overflow-hidden border  border-gray-200">
-                      <div className="lg:w-1/2 w-full relative ">
+                    <div className="flex flex-col lg:flex-row bg-white rounded-xl shadow-md overflow-hidden border-4 border-white">
+                      <div className="lg:w-1/2 w-full ">
                         <img
                           src={data.imageUrl}
                           alt="Cindy Crawford"
                           className="object-cover w-full"
                         />
+                      </div>
+
+                      <div className="lg:w-1/2 w-fullf flex flex-col justify-between p-6 relative">
                         <button
                           className=" w-fit absolute right-2 top-2 px-[8px] py-[4px] text-white border-2 border-red-700 bg-red-700
                           rounded-lg hover:bg-transparent hover:text-red-700 hover:border-red-700 duration-200 ease-out select-none cursor-pointer z-50 "
@@ -176,9 +181,6 @@ export default function TrackServices() {
                         >
                           Close
                         </button>
-                      </div>
-
-                      <div className="lg:w-1/2 w-fullf flex flex-col justify-between p-6 ">
                         <div className=" flex flex-col justify-baseline ">
                           <h2 className="xl:text-[32px] lg:text-[32px] md:text-[28px] text-[24px] font-bold text-gray-900 mb-2">
                             {data.name}
@@ -210,10 +212,10 @@ export default function TrackServices() {
                     </div>
                     <div className=" w-full mt-[16px] ">
                       {data.status === "Complete" ? (
-                        <div className=" w-full flex justify-between items-center ">
+                        <div className=" w-full flex xl:justify-end lg:justify-end md:justify-end justify-between items-center xl:gap[16px] lg:gap-[16px] md:gap-[16px] gap-0 ">
                           <span
                             className=" text-green-700 px-[12px] py-[6px] bg-green-200 rounded-lg
-                          xl:text-[26px] lg:text-[23px] md:text-[20px] sm:text-[17px] text-[14px] flex items-center gap-[8px] "
+                          xl:text-[22px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] flex items-center gap-[8px] "
                           >
                             <span className=" text-black  ">Status: </span>
                             <p className=" flex items-center gap-[4px] ">
@@ -225,7 +227,7 @@ export default function TrackServices() {
                             href={data.driveLink}
                             target="_blank"
                             className=" flex items-center gap-[6px] px-[12px] py-[6px] border-2 border-orange rounded-lg  bg-orange
-                            lg:text-[23px] md:text-[20px] sm:text-[17px] text-[14px] text-white select-none
+                           xl:text-[22px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] text-white select-none
                              group hover:bg-transparent hover:text-orange hover:border-orange duration-200 ease-out  "
                           >
                             <FaCloudDownloadAlt />
@@ -234,8 +236,8 @@ export default function TrackServices() {
                         </div>
                       ) : (
                         <p
-                          className="text-blue-700 px-[12px] py-[6px] bg-green-200 rounded-lg
-                        xl:text-[26px] lg:text-[23px] md:text-[20px] sm:text-[17px] text-[14px] flex items-center gap-[8px] "
+                          className="text-blue-700 px-[12px] py-[6px] bg-green-200 rounded-lg w-fit
+                        xl:text-[22px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] flex items-center gap-[8px] "
                         >
                           <span className=" text-black flex items-center gap-[4px]">
                             Status:

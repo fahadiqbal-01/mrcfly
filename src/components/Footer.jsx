@@ -10,9 +10,9 @@ const footerLinkClass =
 
 const Footer = () => {
   return (
-    <footer className=" bg-black ">
+    <footer >
       <Container>
-        <div className=" grid grid-cols-4 pt-[48px] pb-[32px] border-b-2 border-[#1F2937] xl:px-0 lg:px-0 md:px-0 px-[20px] ">
+        <div className=" grid grid-cols-4 pt-[48px] pb-[32px] border-b-2 border-gray-600 xl:px-0 lg:px-0 md:px-0 px-[20px] ">
           <div className=" col-span-2 ">
             <Link to="/">
               <img

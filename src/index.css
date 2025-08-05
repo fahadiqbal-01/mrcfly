@@ -31,17 +31,17 @@ html {
   scroll-behavior: smooth;
 }
 
-#track-services-banner {
-  background: #00395f;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 57, 95, 1) 0%,
-    rgba(17, 35, 79, 1) 100%
-  );
-}
 
 #track-mid-form {
-  background: gray;
+  background: #343839;
+  background: linear-gradient(
+    90deg,
+    rgba(52, 56, 57, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+footer {
+  background-color: black;
 }
 
 html,

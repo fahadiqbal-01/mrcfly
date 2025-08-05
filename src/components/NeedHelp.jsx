@@ -42,7 +42,7 @@ const NeedHelp = () => {
         loop
         playsInline
         muted
-        className=" absolute left-0 top-[50%] translate-y-[-50%] w-full "
+        className=" absolute left-0 top-[50%] translate-y-[-50%] w-full grayscale-75 "
       >
         <source src="video/serviceVID.mp4" type="video/mp4" />
       </video>
