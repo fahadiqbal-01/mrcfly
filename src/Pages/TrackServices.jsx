@@ -125,6 +125,11 @@ export default function TrackServices() {
             id="track-mid-form"
             className=" w-full px-[24px] py-[78px] rounded-xl "
           >
+            <img
+              src="images/logomrc.png"
+              alt=""
+              className=" w-[50px] absolute left-3 bottom-3 "
+            />
             {!loading && (
               <>
                 {!data || !imageLoaded || !showResult ? (
