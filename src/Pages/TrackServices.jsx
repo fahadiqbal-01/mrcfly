@@ -19,6 +19,12 @@ import TrackServicesBannerSec from "../components/TrackServicesBannerSec";
 
 export default function TrackServices() {
   useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+  }, []);
+
+  useEffect(() => {
     lottie.loadAnimation({
       container: document.getElementById("paperplane-animation"),
       renderer: "svg",
