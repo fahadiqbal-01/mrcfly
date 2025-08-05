@@ -4,20 +4,19 @@ import { db } from "../firebase";
 import { doc, getDoc } from "firebase/firestore";
 import TrackServicesBanner from "../components/TrackServicesBanner";
 import { CiMail, CiSearch } from "react-icons/ci";
-import { IoMdSearch } from "react-icons/io";
+import { IoMdCloudDone, IoMdSearch } from "react-icons/io";
 import { IoCallOutline } from "react-icons/io5";
 import ContainerSec from "../components/ContainerSec";
 import NeedHelp from "../components/NeedHelp";
 import { motion } from "framer-motion";
 import Toastify from "toastify-js";
 import lottie from "lottie-web";
+import Container from "../components/Container";
+import { AiOutlineGlobal } from "react-icons/ai";
+import { VscServerProcess } from "react-icons/vsc";
+import { FaCloudDownloadAlt } from "react-icons/fa";
 
 export default function TrackServices() {
-  
-
-
-
-  
   useEffect(() => {
     lottie.loadAnimation({
       container: document.getElementById("paperplane-animation"),
@@ -98,7 +97,7 @@ export default function TrackServices() {
   return (
     <section id="track-mid" className=" bg-[#ffffff] ">
       <TrackServicesBanner />
-      <ContainerSec className=" mb-[120px] ">
+      <Container className=" mb-[120px] ">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -120,9 +119,12 @@ export default function TrackServices() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="mt-[48px] bg-transparent border-2 border-[#9CA3AF] rounded-2xl xl:mx-0 mx-[50px]  relative"
+          className="mt-[48px] bg-transparent border-2 border-[#9CA3AF] rounded-2xl xl:mx-0 mx-[10px] relative"
         >
-          <div className="p-[24px] ">
+          <div
+            id="track-mid-form"
+            className=" w-full px-[24px] py-[78px] rounded-xl "
+          >
             {!loading && (
               <>
                 {!data || !imageLoaded || !showResult ? (
@@ -147,93 +149,107 @@ export default function TrackServices() {
                     <button
                       type="submit"
                       className="flex justify-center items-center gap-[6px] font-G-Sans xl:text-[18px] lg:text-[14px] md:text-[12px] text-[10px] text-white leading-[28px] tracking-[6px]
-            bg-orange border-2 border-transparent xl:px-[34px] xl:py-[17px] lg:px-[30px] lg:py-[14px] md:px-[24px] md:py-[10px] px-[10px] py-[6px] rounded-[8px] cursor-pointer 
-            hover:border-orange hover:text-orange hover:bg-transparent transition-colors duration-300 ease-out select-none "
+            bg-orange border-2 border-transparent xl:px-[34px] xl:py-[17px] lg:px-[30px] lg:py-[14px] md:px-[24px] md:py-[10px] px-[10px] py-[6px] rounded-[8px] cursor-pointer  select-none "
                       disabled={loading}
                     >
                       <IoMdSearch className="text-[22px]" /> Track
                     </button>
                   </form>
                 ) : (
-                  <div
-                    id="result"
-                    className="w-full mx-auto bg-transparent border border-gray-200 rounded-lg shadow-sm "
-                  >
-                    <div className="flex flex-col items-center py-10 relative ">
-                      <img
-                        className="w-32 mb-3 rounded-lg shadow-lg"
-                        src={data.imageUrl}
-                        alt="Bonnie image"
-                      />
-                      <h5 className="mb-1 text-xl font-medium text-gray-900 ">
-                        {data.name}
-                      </h5>
-                      <span className="text-sm text-gray-500 ">
-                        {data.serviceType}
-                      </span>
-                      <span className="text-sm text-gray-500 ">
-                        Last Updated: {data.date}
-                      </span>
-                      <span className="text-sm text-[#000000] w-[70%] text-center ">
-                        {data.shortNote}
-                      </span>
-                      <div className="flex mt-4 md:mt-6">
-                        {data.status === "Complete" ? (
-                          <div>
-                            <h2 className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-green-700 bg-green-200 rounded-lg ">
-                              {data.status}
-                            </h2>
-                            <a
-                              href={data.driveLink}
-                              target="_blank"
-                              className="py-2 px-4 ms-2 text-sm font-medium text-orange focus:outline-none bg-white rounded-lg border border-orange
-                               hover:bg-orange hover:text-white duration-300 ease-out "
-                            >
-                              Download
-                            </a>
-                          </div>
-                        ) : (
-                          <a className="py-2 px-4 ms-2 text-sm font-medium text-blue-700 focus:outline-none bg-blue-300 rounded-lg border border-blue-700 ">
-                            {data.status}
-                          </a>
-                        )}
+                  <div className=" w-full mx-auto py-4 overflow-hidden ">
+                    <div className="flex flex-col lg:flex-row bg-white rounded-xl shadow-md overflow-hidden border  border-gray-200">
+                      <div className="lg:w-1/2 w-full relative ">
+                        <img
+                          src={data.imageUrl}
+                          alt="Cindy Crawford"
+                          className="object-cover w-full"
+                        />
+                        <button
+                          className=" w-fit absolute right-2 top-2 px-[8px] py-[4px] text-white border-2 border-red-700 bg-red-700
+                          rounded-lg hover:bg-transparent hover:text-red-700 hover:border-red-700 duration-200 ease-out select-none cursor-pointer z-50 "
+                          onClick={handleCloseResult}
+                        >
+                          Close
+                        </button>
                       </div>
-                      <button
-                        onClick={handleCloseResult}
-                        className=" absolute top-3 right-4 text-red-600 border-2 border-transparent px-[8px] py-[4px] rounded-lg 
-                        hover:bg-red-600 hover:text-white duration-300 ease-out cursor-pointer "
-                      >
-                        Close
-                      </button>
-                      <div></div>
+
+                      <div className="lg:w-1/2 w-fullf flex flex-col justify-between p-6 ">
+                        <div className=" flex flex-col justify-baseline ">
+                          <h2 className="xl:text-[32px] lg:text-[32px] md:text-[28px] text-[24px] font-bold text-gray-900 mb-2">
+                            {data.name}
+                          </h2>
+
+                          <p className="text-sm text-gray-700 mb-1">
+                            Service Type: {data.serviceType}
+                          </p>
+                          <p className="text-sm text-gray-700 mb-1">
+                            Last Update: {data.date}
+                          </p>
+
+                          <p className="text-sm text-gray-600 mb-4">
+                            {data.shortNote}
+                          </p>
+                        </div>
+
+                        <div className="mt-[24px] ">
+                          <span className="text-[#01395e] font-bold xl:text-sm lg:text-sm md:text-sm text-xs flex items-center gap-[12px] ">
+                            <p>Thanks for choosing our services!</p>{" "}
+                            <img
+                              src="images/logomrc.png"
+                              alt=""
+                              className=" w-[50px] "
+                            />
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className=" w-full mt-[16px] ">
+                      {data.status === "Complete" ? (
+                        <div className=" w-full flex justify-between items-center ">
+                          <span
+                            className=" text-green-700 px-[12px] py-[6px] bg-green-200 rounded-lg
+                          xl:text-[26px] lg:text-[23px] md:text-[20px] sm:text-[17px] text-[14px] flex items-center gap-[8px] "
+                          >
+                            <span className=" text-black  ">Status: </span>
+                            <p className=" flex items-center gap-[4px] ">
+                              {data.status}
+                              <IoMdCloudDone />
+                            </p>
+                          </span>
+                          <a
+                            href={data.driveLink}
+                            target="_blank"
+                            className=" flex items-center gap-[6px] px-[12px] py-[6px] border-2 border-orange rounded-lg  bg-orange
+                            lg:text-[23px] md:text-[20px] sm:text-[17px] text-[14px] text-white select-none
+                             group hover:bg-transparent hover:text-orange hover:border-orange duration-200 ease-out  "
+                          >
+                            <FaCloudDownloadAlt />
+                            Download
+                          </a>
+                        </div>
+                      ) : (
+                        <p
+                          className="text-blue-700 px-[12px] py-[6px] bg-green-200 rounded-lg
+                        xl:text-[26px] lg:text-[23px] md:text-[20px] sm:text-[17px] text-[14px] flex items-center gap-[8px] "
+                        >
+                          <span className=" text-black flex items-center gap-[4px]">
+                            Status:
+                          </span>
+
+                          <span className=" flex items-center gap-[6px] ">
+                            {data.status}
+                            <VscServerProcess className=" text-blue-700 " />
+                          </span>
+                        </p>
+                      )}
                     </div>
                   </div>
                 )}
-
-                <div className="mt-[24px]">
-                  <h2 className="font-Gambetta xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#4B5563] text-center">
-                    <b>Need help with any of our services?</b> <br />
-                    Just reach out to our support team — we’re here for you!
-                  </h2>
-                  <div
-                    className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-row flex-col items-center justify-center
-        xl:gap-[16px] lg:gap-[16px] md:gap-[12px] gap-[4px] xl:mt-[16px] lg:mt-[16px] md:mt-[16px] mt-[18px] "
-                  >
-                    <h3 className="flex items-center justify-center gap-[6px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#4B5563]">
-                      <IoCallOutline className="xl:text-[14px] lg:text-[12px] md:text-[10px]" />
-                      +880 182 5419803
-                    </h3>
-                    <h4 className="flex items-center justify-center gap-[6px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#4B5563]">
-                      <CiMail className="xl:text-[14px] lg:text-[12px] md:text-[10px]" />
-                      moonrajchowdhury@gmail.com
-                    </h4>
-                  </div>
-                </div>
               </>
             )}
 
             {loading && (
-              <div className=" flex justify-center items-center ">
+              <div className=" bg-gray-300/60 backdrop-blur-md rounded-xl flex justify-center items-center ">
                 <img
                   src="images/Paperplane.gif"
                   alt="planeLoadingAnimation"
@@ -256,7 +272,26 @@ export default function TrackServices() {
             />
           )}
         </motion.div>
-      </ContainerSec>
+        <div className="mt-[24px] bg-white ">
+          <h2 className="font-Gambetta px-[26px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#000000] text-center">
+            <b>Need help with any of our services?</b> <br />
+            Just reach out to our support team — we’re here for you!
+          </h2>
+          <div
+            className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-row flex-col items-center justify-center
+        xl:gap-[16px] lg:gap-[16px] md:gap-[12px] gap-[4px] xl:mt-[16px] lg:mt-[16px] md:mt-[16px] mt-[18px] "
+          >
+            <h3 className="flex items-center justify-center gap-[6px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#000000]">
+              <IoCallOutline className="xl:text-[14px] lg:text-[12px] md:text-[10px]" />
+              +880 182 5419803
+            </h3>
+            <h4 className="flex items-center justify-center gap-[6px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#000000]">
+              <CiMail className="xl:text-[14px] lg:text-[12px] md:text-[10px]" />
+              moonrajchowdhury@gmail.com
+            </h4>
+          </div>
+        </div>
+      </Container>
 
       <NeedHelp />
 
@@ -281,4 +316,3 @@ export default function TrackServices() {
     </section>
   );
 }
-
