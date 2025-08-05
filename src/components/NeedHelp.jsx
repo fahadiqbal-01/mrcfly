@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const NeedHelp = () => {
-  const whatsappRedirect = "https://wa.me/8801825419803.";
+  const whatsappRedirect = "https://wa.me/8801825419803";
 
   return (
     <motion.div

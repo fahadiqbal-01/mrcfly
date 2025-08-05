@@ -31,7 +31,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 #track-mid-form {
   background: #343839;
   background: linear-gradient(
@@ -40,8 +39,17 @@ html {
     rgba(0, 0, 0, 1) 100%
   );
 }
+#track-mid-sec {
+  background: #343839;
+  background: linear-gradient(
+    0deg,
+    rgba(52, 56, 57, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
 footer {
-  background-color: black;
+  background: #000000;
 }
 
 html,

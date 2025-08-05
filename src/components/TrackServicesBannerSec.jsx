@@ -8,6 +8,7 @@ const TrackServicesBannerSec = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
       viewport={{ once: true }}
+      id="track-mid-sec"
       className="pt-[80px] pb-[120px] bg-[#343839] drop-shadow-lg "
     >
       <h1 className=" font-G-Sans-bold xl:text-[48px] lg:text-[38px] md:text-[28px] text-[24px] text-center ">
