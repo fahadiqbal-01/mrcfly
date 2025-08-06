@@ -52,7 +52,7 @@ const Navbar = () => {
           className={` ${
             isMenuOpen
               ?  (`block absolute left-0 top-[70px] gradient-bg pb-[36px] z-50 `)
-              : " xl:flex lg:flex md:flex absolute left-0 top-[-280px]  "
+              : " xl:flex lg:flex md:flex hidden  "
           }   items-center justify-end w-full 
         xl:gap-[120px] lg:gap-[100px] md:gap-[60px] sm:gap-[40px] gap-[20px] d `}
         >
