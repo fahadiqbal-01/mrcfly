@@ -14,11 +14,11 @@ const NeedHelp = () => {
       className=" bg-transparent text-center overflow-hidden py-[80px] xl:mb-0 lg:mb-0 md:mb-0 sm:mb-0 mb-[-65px] relative "
     >
       <div className=" relative z-10  ">
-        <h2 className=" font-switzer-i xl:text-[48px] lg:text-[38px] md:text-[28px] text-[24px] leading-[40px] text-orange">
+        <h2 className=" font-switzer-i xl:text-[48px] lg:text-[38px] text-[28px]  leading-[40px] text-orange">
           Need Help?
         </h2>
         <p
-          className=" font-G-Sans xl:text-[20px] lg:text-[16px] md:text-[12px] text-[14px] xl:leading-[28px] lg:leading-[24px]
+          className=" font-G-Sans-medium xl:text-[20px] lg:text-[16px] md:text-[12px] text-[14px] xl:leading-[28px] lg:leading-[24px]
          leading-[20px] text-[#ffffff] xl:mt-[18px] lg:mt-[16px] md:mt-[12px] mt-[8px] xl:w-[670px] lg:w-[500px] md:w-[400px] w-[70%] mx-auto"
         >
           Our support team is here to help you track your service or answer any
@@ -31,7 +31,7 @@ const NeedHelp = () => {
         target="_blank"
         rel="noopener noreferrer"
         className=" inline-block bg-orange xl:px-[32px] xl:py-[18px] lg:px-[28px] lg:py-[14px] md:px-[24px] md:py-[10px] px-[10px] font-switzer-i
-         py-[10px]] border-2 border-transparent rounded-[8px] 
+         py-[10px] border-2 border-transparent rounded-[8px] 
          xl:text-[20px] lg:text-[18px] md:text-[14px] xl:leading-[32.5px] lg:leading-[32.5px] md:leading-[20px] leading-[20px]
          xl:mt-[22px] lg:mt-[18px] md:mt-[14px] mt-[12px] hover:bg-transparent hover:text-white hover:border-orange duration-200 ease-out select-none relative z-50 "
       >

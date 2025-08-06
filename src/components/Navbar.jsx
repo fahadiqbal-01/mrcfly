@@ -36,7 +36,7 @@ const Navbar = () => {
 
 
   return (
-    <nav ref={navRef} className="py-[16px] bg-[#000000] xl:px-0 lg:px-0 md:px-4 px-0  relative ">
+    <nav ref={navRef} className="py-[16px] bg-[#000000] xl:px-0 lg:px-0 md:px-4 px-0 relative  ">
       <Container className="flex flex-row items-center justify-between ">
         <NavLink to="/">
           <motion.img
@@ -45,16 +45,16 @@ const Navbar = () => {
             transition={{ duration: 0.5, ease: "easeInOut" }}
             src="/images/logomrcsec.png"
             alt="weblogo"
-            className=" h-[44px] pl-[15px] select-none  "
+            className=" h-[44px] pl-[15px] select-none !z-50 "
           />
         </NavLink>
         <div
           className={` ${
             isMenuOpen
-              ?  (`block absolute left-0 top-[70px] gradient-bg pb-[36px] z-50`)
-              : " xl:flex lg:flex md:flex sm:hidden hidden"
+              ?  (`block absolute left-0 top-[70px] gradient-bg pb-[36px] z-50 `)
+              : " xl:flex lg:flex md:flex absolute left-0 top-[-280px]  "
           }   items-center justify-end w-full 
-        xl:gap-[120px] lg:gap-[100px] md:gap-[60px] sm:gap-[40px] gap-[20px] `}
+        xl:gap-[120px] lg:gap-[100px] md:gap-[60px] sm:gap-[40px] gap-[20px] d `}
         >
           <List className="xl:gap-[24px] lg:gap-[24px] md:gap-[24px] sm:gap-[12px] gap-[8px]">
             <NavLink
