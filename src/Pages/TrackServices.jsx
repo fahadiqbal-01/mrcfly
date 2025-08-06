@@ -114,14 +114,26 @@ export default function TrackServices() {
           id="mid-form-top"
           className="pt-[80px] text-center"
         >
-          <h3 className="font-switzer-i xl:text-[48px] lg:text-[38px] md:text-[28px] text-[24px] leading-[36px] text-black">
+          <motion.h3
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="font-switzer-i xl:text-[48px] lg:text-[38px] md:text-[28px] text-[24px] leading-[36px] text-black"
+          >
             Track Your Service
-          </h3>
-          <h4 className="mt-[16px] text-[#4B5563] font-G-Sans-medium text-[18px] leading-[28px] xl:px-0 lg:px-0 md:px-0 px-[20px]">
+          </motion.h3>
+          <motion.h4
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="mt-[16px] text-[#4B5563] font-G-Sans-medium text-[18px] leading-[28px] xl:px-0 lg:px-0 md:px-0 px-[20px]"
+          >
             Enter your{" "}
             <span className=" text-orange ">Passport or National ID</span>{" "}
             number to view the current status of your request
-          </h4>
+          </motion.h4>
         </motion.div>
 
         <motion.div

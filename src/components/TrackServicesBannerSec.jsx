@@ -12,10 +12,24 @@ const TrackServicesBannerSec = () => {
       className="pt-[80px] pb-[120px] bg-[#343839] drop-shadow-lg "
     >
       <h1 className=" font-switzer-i xl:text-[48px] lg:text-[38px] text-[28px] text-center ">
-        <p className=" text-[#FFFFFF] ">Track Your</p>
-        <p className=" text-orange xl:mt-[-18px] lg:mt-[-14px] md:mt-[-10px] mt-[-4px] ">
+        <motion.p
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className=" text-[#FFFFFF] "
+        >
+          Track Your
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true }}
+          className=" text-orange xl:mt-[-18px] lg:mt-[-14px] md:mt-[-10px] mt-[-4px] "
+        >
           Service Progress
-        </p>
+        </motion.p>
       </h1>
       <p
         className=" font-G-Sans-medium xl:text-[20px] lg:text-[18px] md:text-[14px] xl:leading-[32.5px] lg:leading-[32.5px] md:leading-[20px] leading-[20px] text-white 

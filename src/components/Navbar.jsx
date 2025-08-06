@@ -33,25 +33,29 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isMenuOpen]);
 
-
-
   return (
-    <nav ref={navRef} className="py-[16px] bg-[#000000] xl:px-0 lg:px-0 md:px-4 px-0 relative  ">
+    <nav
+      ref={navRef}
+      className="py-[16px] bg-[#000000] xl:px-0 lg:px-0 md:px-4 px-0 relative  "
+    >
       <Container className="flex flex-row items-center justify-between ">
         <NavLink to="/">
           <motion.img
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             src="/images/logomrcsec.png"
             alt="weblogo"
             className=" h-[44px] pl-[15px] select-none !z-50 "
           />
         </NavLink>
-        <div
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className={` ${
             isMenuOpen
-              ?  (`block absolute left-0 top-[70px] gradient-bg pb-[36px] z-50 `)
+              ? `block absolute left-0 top-[70px] gradient-bg pb-[36px] z-50 `
               : " xl:flex lg:flex md:flex hidden  "
           }   items-center justify-end w-full 
         xl:gap-[120px] lg:gap-[100px] md:gap-[60px] sm:gap-[40px] gap-[20px] d `}
@@ -147,11 +151,11 @@ const Navbar = () => {
               Free Consultation
             </a>
           </div>
-        </div>
+        </motion.div>
         <motion.button
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           onClick={handleToggle}
           className=" xl:hidden lg:hidden md:hidden block xl:mr-0 lg:mr-0 md:mr-0 sm:mr-0 mr-[20px] "
         >
