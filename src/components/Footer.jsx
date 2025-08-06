@@ -22,8 +22,10 @@ const Footer = () => {
               />
             </Link>
 
-            <p className=" text-white/80 xl:text-[16px] text-[14px] xl:leading-[24px] lg:leading-[16px] leading-[14px] 
-            font-G-Sans xl:w-[570px] lg:w-[440px] md:w-[320px] sm:w-[240px] w-[150px] ">
+            <p
+              className=" text-white/80 xl:text-[16px] text-[14px] xl:leading-[24px] lg:leading-[16px] leading-[14px] 
+            font-G-Sans xl:w-[570px] lg:w-[440px] md:w-[320px] sm:w-[240px] w-[150px] "
+            >
               Your trusted partner for job applications, work permits, student
               visas, and tourist visa services — providing expert guidance,
               personalized support, and a hassle-free experience to help you
@@ -98,9 +100,16 @@ const Footer = () => {
           <p className="font-G-Sans  text-white/80 xl:text-[14px] lg:text-[12px] text-[10px] ">
             © 2025 MRC. All rights reserved.
           </p>
-          {/* <p className=" text-white/80 xl:text-[14px] lg:text-[12px] text-[10px] mt-[6px] ">
-            Made by <a href="" className=" text-orange select-none  " >Fahad Iqbal</a>
-          </p> */}
+          <p className=" text-white/80 xl:text-[14px] lg:text-[12px] text-[10px] mt-[6px] flex items-center gap-[8px] ">
+            Made by
+            <a
+              href="https://fahadiqbal.vercel.app/"
+              target="_blank"
+              className=" text-orange select-none  "
+            >
+              Fahad Iqbal
+            </a>
+          </p>
         </div>
       </Container>
     </footer>
