@@ -184,7 +184,7 @@ export default function TrackServices() {
                   </form>
                 ) : (
                   <div className=" w-full mx-auto py-4 ">
-                    <div className="flex flex-col lg:flex-row bg-white rounded-xl shadow-md border-4 border-white">
+                    <div className="flex flex-col lg:flex-row bg-transparent rounded-xl drop-shadow-2xl shadow-2xl ">
                       <div className="lg:w-1/2 w-full relative">
                         <img
                           src={data.imageUrl}
@@ -207,33 +207,33 @@ export default function TrackServices() {
 
                       <div
                         id="result-container"
-                        className="lg:w-1/2 w-fullf flex flex-col justify-between px-2  "
+                        className="lg:w-1/2 w-fullf flex flex-col justify-between pt-8 "
                       >
                         <div className=" flex flex-col justify-baseline ">
-                          <h2 className=" font-switzer-i tracking-normal xl:text-[48px] lg:text-[34px] md:text-[30px] text-[20px] font-bold text-black mb-2">
+                          <h2 className=" font-stardom tracking-normal xl:text-[42px] lg:text-[34px] md:text-[30px] text-[24px] font-bold text-gray-300 mb-2 text-center">
                             {data.name}
                           </h2>
 
-                          <p className="xl:text-xl lg:text-lg md:text-md text-sm text-black font-G-Sans-medium mb-1">
+                          <p className="xl:text-lg lg:text-lg text-md text-center text-gray-300 font-G-Sans-medium mb-1">
                             Service Type -{" "}
                             <span className=" font-G-Sans ">
                               {data.serviceType}
                             </span>
                           </p>
-                          <p className="xl:text-xl lg:text-lg md:text-md text-sm text-black font-G-Sans-medium mb-1">
+                          <p className="xl:text-lg lg:text-lg text-md text-center text-gray-300 font-G-Sans-medium mb-1">
                             Last Update -{" "}
                             <span className=" font-G-Sans ">{data.date}</span>
                           </p>
 
-                          <p className="xl:text-xl lg:text-lg md:text-md text-sm text-black font-switzer mb-3">
+                          <p className="xl:text-2xl lg:text-lg text-md text-center text-gray-300 font-switzer mb-4 w-[80%] mx-auto ">
                             {data.shortNote}
                           </p>
                           <div className=" w-full ">
                             {data.status === "Complete" ? (
-                              <div className=" w-full flex xl:justify-start lg:justify-start md:justify-start justify-start items-center xl:gap[16px] lg:gap-[16px] md:gap-[16px] gap-[8px] ">
+                              <div className=" w-full flex justify-center items-center xl:gap[16px] lg:gap-[16px] md:gap-[16px] gap-[8px] ">
                                 <span
-                                  className=" text-green-700 px-[8px] py-[4px] bg-green-200 rounded-lg
-                          xl:text-[16px] lg:text-[14px] md:text-[12px] sm:text-[10px] text-[12px] flex items-center gap-[8px] "
+                                  className=" text-green-800 px-[8px] py-[4px] bg-transparent rounded-lg
+                                 text-[16px] flex items-center gap-[8px] "
                                 >
                                   Status:
                                   <p className=" flex items-center gap-[4px] ">
@@ -245,9 +245,9 @@ export default function TrackServices() {
                                   href={data.driveLink}
                                   target="_blank"
                                   id="download-link"
-                                  className=" flex items-center gap-[6px] px-[6px] py-[3px] rounded-lg bg-black
-                                  xl:text-[16px] lg:text-[14px] md:text-[12px] sm:text-[10px] text-[12px] text-white select-none 
-                                  hover:bg-transparent hover:text-black duration-300 ease-out "
+                                  className=" flex items-center gap-[6px] px-[8px] py-[4px] rounded-lg bg-gray-400
+                                  xl:text-[16px] lg:text-[14px] md:text-[12px] sm:text-[10px] text-[12px] text-black select-none 
+                                  hover:bg-transparent hover:text-white duration-300 ease-out "
                                 >
                                   <FaCloudDownloadAlt />
                                   Download
@@ -255,30 +255,53 @@ export default function TrackServices() {
                               </div>
                             ) : (
                               <p
-                                className="text-blue-700 px-[8px] py-[4px] bg-transparent rounded-lg w-fit border border-blue-700
-                        xl:text-[16px] lg:text-[14px] md:text-[12px] sm:text-[10px] text-[12px] flex items-center gap-[8px] "
+                                className="text-blue-500 px-[8px] py-[4px] bg-transparent rounded-lg w-fit 
+                                text-[16px] flex justify-center items-center gap-[8px] mx-auto "
                               >
                                 Status:
-                                <span className=" flex items-center gap-[6px] ">
+                                <span className=" flex justify-center items-center gap-[6px] ">
                                   {data.status}
-                                  <VscServerProcess className=" text-blue-700 " />
+                                  <VscServerProcess className=" text-blue-500 " />
                                 </span>
                               </p>
                             )}
                           </div>
                         </div>
-
-                        <div className="mt-[24px] ">
-                          <span className="text-black font-bold xl:text-xl lg:text-xl md:text-xl text-xs flex items-center gap-[12px] ">
-                            <p>Thanks for choosing our services!</p>{" "}
-                            <img
-                              src="images/logomrc.png"
-                              alt=""
-                              className=" w-[50px] "
-                            />
-                          </span>
+                        <div className=" flex justify-between items-center mt-[36px]">
+                          <div className=" p-4 flex items-center gap-2  ">
+                            <p className=" text-white xl:text-lg lg:text-lg md:text-md text-sm text-center ">
+                              @mrcfly
+                            </p>
+                            <div className=" flex justify-center items-center gap-3 ">
+                              <img
+                                src="images/instagram.png"
+                                alt=""
+                                className="xl:w-[25px] lg:w-[20px] w-[15px] select-none cursor-pointer "
+                              />
+                              <img
+                                src="images/facebook.png"
+                                alt=""
+                                className="xl:w-[25px] lg:w-[20px] w-[15px] select-none cursor-pointer "
+                              />
+                              <img
+                                src="images/whatsapp.png"
+                                alt=""
+                                className="xl:w-[25px] lg:w-[20px] w-[15px] select-none cursor-pointer "
+                              />
+                            </div>
+                          </div>
+                          <img
+                            src="images/logomrcsec.png"
+                            alt="mrclogo"
+                            className="xl:w-[60px] lg:w-[60px] md:w-[50px] w-[40px] "
+                          />
                         </div>
                       </div>
+                    </div>
+                    <div className="mt-[24px]  ">
+                      <p className="text-white font-bold xl:text-xl lg:text-xl md:text-xl text-[14px]">
+                        Thanks for choosing our services!
+                      </p>
                     </div>
                   </div>
                 )}

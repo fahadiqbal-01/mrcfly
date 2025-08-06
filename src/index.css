@@ -14,6 +14,7 @@
   --font-zina: "zina", "sans-serif";
   --font-aktura: "aktura", "sans-serif";
   --font-title: "title", "sans-serif";
+  --font-stardom: "stardom", "sans-serif";
 }
 
 @font-face {
@@ -54,6 +55,11 @@
 @font-face {
   font-family: title;
   src: url(./assets/fonts/NewTitle_Complete/NewTitle_Complete/Fonts/TTF/NewTitle-Variable.ttf);
+  format: "opentype";
+}
+@font-face {
+  font-family: stardom;
+  src: url(./assets/fonts/Stardom_Complete/Stardom_Complete/Fonts/OTF/Stardom-Regular.otf);
   format: "opentype";
 }
 
