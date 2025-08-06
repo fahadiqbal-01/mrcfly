@@ -155,7 +155,7 @@ const Navbar = () => {
         <motion.button
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
           onClick={handleToggle}
           className=" xl:hidden lg:hidden md:hidden block xl:mr-0 lg:mr-0 md:mr-0 sm:mr-0 mr-[20px] "
         >

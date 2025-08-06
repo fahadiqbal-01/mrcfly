@@ -9,7 +9,7 @@ const TrackServicesBanner = () => {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
+      transition={{delay:0.5, duration: 0.7, ease: "easeInOut" }}
       viewport={{ once: true }}
       className=" h-full max-h-screen drop-shadow-lg overflow-hidden relative "
     >

@@ -109,7 +109,7 @@ export default function TrackServices() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
           viewport={{ once: true }}
           id="mid-form-top"
           className="pt-[80px] text-center"
@@ -117,7 +117,7 @@ export default function TrackServices() {
           <motion.h3
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
+            transition={{ delay: 0.5, duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true }}
             className="font-switzer-i xl:text-[48px] lg:text-[38px] md:text-[28px] text-[24px] leading-[36px] text-black"
           >
@@ -126,7 +126,7 @@ export default function TrackServices() {
           <motion.h4
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
+            transition={{ delay: 0.5, duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true }}
             className="mt-[16px] text-[#4B5563] font-G-Sans-medium text-[18px] leading-[28px] xl:px-0 lg:px-0 md:px-0 px-[20px]"
           >
@@ -139,7 +139,7 @@ export default function TrackServices() {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          transition={{ delay: 0.5, duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true }}
           className="mt-[48px] bg-transparent border-2 border-white rounded-2xl xl:mx-0 mx-[10px] relative"
         >
@@ -183,9 +183,14 @@ export default function TrackServices() {
                     </button>
                   </form>
                 ) : (
-                  <div className=" w-full mx-auto py-4 ">
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ delay: 0.5, duration: 0.7, ease: "easeOut" }}
+                    className=" w-full mx-auto py-4 "
+                  >
                     <div className="flex flex-col lg:flex-row bg-transparent rounded-xl drop-shadow-2xl shadow-2xl ">
-                      <div className="lg:w-1/2 w-full relative">
+                      <div className="lg:w-1/2 w-full md:w-[70%] sm:w-[50%] mx-auto relative">
                         <img
                           src={data.imageUrl}
                           alt="Cindy Crawford"
@@ -210,7 +215,7 @@ export default function TrackServices() {
                         className="lg:w-1/2 w-fullf flex flex-col justify-between pt-8 "
                       >
                         <div className=" flex flex-col justify-baseline ">
-                          <h2 className=" font-stardom tracking-normal xl:text-[42px] lg:text-[34px] md:text-[30px] text-[24px] font-bold text-white mb-2 text-center">
+                          <h2 className=" font-stardom tracking-normal xl:text-[42px] lg:text-[30px] md:text-[30px] text-[24px] font-bold text-white mb-2 text-center">
                             {data.name}
                           </h2>
 
@@ -303,7 +308,7 @@ export default function TrackServices() {
                         Thanks for choosing our services!
                       </p>
                     </div>
-                  </div>
+                  </motion.div>
                 )}
               </>
             )}
@@ -336,7 +341,7 @@ export default function TrackServices() {
           <motion.h2
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
+            transition={{ delay: 0.5, duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true }}
             className="font-G-Sans-medium px-[26px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#000000] text-center"
           >
@@ -346,7 +351,7 @@ export default function TrackServices() {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
             className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-row flex-col items-center justify-center
         xl:gap-[16px] lg:gap-[16px] md:gap-[12px] gap-[4px] xl:mt-[16px] lg:mt-[16px] md:mt-[16px] mt-[18px] "
