@@ -22,7 +22,7 @@ const NeedHelp = () => {
          leading-[20px] text-[#ffffff] xl:mt-[18px] lg:mt-[16px] md:mt-[12px] mt-[8px] xl:w-[670px] lg:w-[500px] md:w-[400px] w-[70%] mx-auto"
         >
           Our support team is here to help you track your service or answer any
-          questions about your application.
+          questions about your application
         </p>
       </div>
 
@@ -30,10 +30,9 @@ const NeedHelp = () => {
         href={whatsappRedirect}
         target="_blank"
         rel="noopener noreferrer"
-        className=" inline-block bg-orange xl:px-[32px] xl:py-[18px] lg:px-[28px] lg:py-[14px] md:px-[24px] md:py-[10px] px-[10px] font-switzer-i
-         py-[10px] border-2 border-transparent rounded-[8px] text-white
+        className=" inline-block bg-orange px-[24px] py-[8px] font-switzer-i border-4 border-transparent rounded-[8px] text-white
          xl:text-[20px] lg:text-[18px] md:text-[14px] xl:leading-[32.5px] lg:leading-[32.5px] md:leading-[20px] leading-[20px]
-         xl:mt-[22px] lg:mt-[18px] md:mt-[14px] mt-[12px] hover:bg-transparent hover:text-white hover:border-orange duration-200 ease-out select-none relative z-50 "
+         xl:mt-[22px] lg:mt-[18px] md:mt-[14px] mt-[12px] hover:bg-transparent hover:text-orange hover:border-orange duration-200 ease-out select-none relative z-50 "
       >
         Contact Support
       </a>

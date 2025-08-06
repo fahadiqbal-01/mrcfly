@@ -210,7 +210,7 @@ export default function TrackServices() {
                         className="lg:w-1/2 w-fullf flex flex-col justify-between pt-8 "
                       >
                         <div className=" flex flex-col justify-baseline ">
-                          <h2 className=" font-stardom tracking-normal xl:text-[42px] lg:text-[34px] md:text-[30px] text-[24px] font-bold text-gray-300 mb-2 text-center">
+                          <h2 className=" font-stardom tracking-normal xl:text-[42px] lg:text-[34px] md:text-[30px] text-[24px] font-bold text-white mb-2 text-center">
                             {data.name}
                           </h2>
 
@@ -225,7 +225,7 @@ export default function TrackServices() {
                             <span className=" font-G-Sans ">{data.date}</span>
                           </p>
 
-                          <p className="xl:text-2xl lg:text-lg text-md text-center text-gray-300 font-switzer mb-4 w-[80%] mx-auto ">
+                          <p className="xl:text-2xl lg:text-lg text-md text-center text-gray-300 font-G-Sans-medium mb-4 w-[80%] mx-auto ">
                             {data.shortNote}
                           </p>
                           <div className=" w-full ">
@@ -276,17 +276,17 @@ export default function TrackServices() {
                               <img
                                 src="images/instagram.png"
                                 alt=""
-                                className="xl:w-[25px] lg:w-[20px] w-[15px] select-none cursor-pointer "
+                                className="xl:w-[25px] lg:w-[20px] w-[15px] select-none cursor-pointer grayscale-0 hover:grayscale-100 duration-300 ease-out "
                               />
                               <img
                                 src="images/facebook.png"
                                 alt=""
-                                className="xl:w-[25px] lg:w-[20px] w-[15px] select-none cursor-pointer "
+                                className="xl:w-[25px] lg:w-[20px] w-[15px] select-none cursor-pointer grayscale-0 hover:grayscale-100 duration-300 ease-out "
                               />
                               <img
                                 src="images/whatsapp.png"
                                 alt=""
-                                className="xl:w-[25px] lg:w-[20px] w-[15px] select-none cursor-pointer "
+                                className="xl:w-[25px] lg:w-[20px] w-[15px] select-none cursor-pointer grayscale-0 hover:grayscale-100 duration-300 ease-out "
                               />
                             </div>
                           </div>
