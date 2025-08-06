@@ -102,13 +102,13 @@ const Footer = () => {
           </p>
           <p className=" text-white/80 xl:text-[14px] lg:text-[12px] text-[10px] mt-[6px] flex items-center gap-[8px] ">
             Made by
-            <a
+            {/* <a
               href="https://fahadiqbal.vercel.app/"
               target="_blank"
               className=" text-orange select-none  "
             >
               Fahad Iqbal
-            </a>
+            </a> */}
           </p>
         </div>
       </Container>
