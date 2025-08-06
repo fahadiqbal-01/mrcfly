@@ -51,7 +51,7 @@ export default function TrackServices() {
         position: "right", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
-          background: "#f67a1b", // Red background
+          background: "#000000", // Red background
           color: "#ffffff", // White text
           fontFamily: "Gsans, sans-serif", // Custom font
           fontSize: "16px", // Font size// Orange border
@@ -81,7 +81,7 @@ export default function TrackServices() {
         position: "right", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
-          background: "#f67a1b", // Red background
+          background: "#000000", // Red background
           color: "#ffffff", // White text
           fontFamily: "Gsans, sans-serif", // Custom font
           fontSize: "16px", // Font size// Orange border
@@ -105,7 +105,7 @@ export default function TrackServices() {
     <section id="track-mid" className=" bg-[#ffffff] ">
       <TrackServicesBanner />
       <TrackServicesBannerSec />
-      <Container className=" mb-[120px] ">
+      <Container className=" mb-[80px] ">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -114,12 +114,13 @@ export default function TrackServices() {
           id="mid-form-top"
           className="pt-[80px] text-center"
         >
-          <h3 className="font-G-Sans-bold xl:text-[48px] lg:text-[38px] md:text-[28px] text-[24px] leading-[36px] text-black">
+          <h3 className="font-switzer-i xl:text-[48px] lg:text-[38px] md:text-[28px] text-[24px] leading-[36px] text-black">
             Track Your Service
           </h3>
-          <h4 className="mt-[16px] text-[#4B5563] font-Gambetta text-[18px] leading-[28px] xl:px-0 lg:px-0 md:px-0 px-[20px]">
-            Enter your Passport or National ID number to view the current status
-            of your request
+          <h4 className="mt-[16px] text-[#4B5563] font-G-Sans-medium text-[18px] leading-[28px] xl:px-0 lg:px-0 md:px-0 px-[20px]">
+            Enter your{" "}
+            <span className=" text-orange ">Passport or National ID</span>{" "}
+            number to view the current status of your request
           </h4>
         </motion.div>
 
@@ -152,9 +153,9 @@ export default function TrackServices() {
                   >
                     <input
                       id="service-id-input"
-                      className=" font-G-Sans-bold bg-[#ffffff] xl:px-[25px] xl:py-[19px] lg:px-[20px] lg:py-[16px] px-[16px] py-[12px]
+                      className=" font-G-Sans-medium bg-[#ffffff] xl:px-[25px] xl:py-[19px] lg:px-[20px] lg:py-[16px] px-[16px] py-[12px]
           w-full xl:max-w-[610px] lg:max-w-[510px] md:max-w-[410px] max-w-[310px] border-2 border-[#9CA3AF] rounded-[8px]
-          focus:outline-none focus:border-orange xl:placeholder:text-[18px] lg:placeholder:text-[16px] md:placeholder:text-[14px] placeholder:select-none placeholder:font-Gambetta no-arrows "
+          focus:outline-none focus:border-orange xl:placeholder:text-[18px] lg:placeholder:text-[16px] md:placeholder:text-[14px] placeholder:select-none placeholder:font-G-Sans no-arrows "
                       type="text"
                       value={id}
                       placeholder="Enter Passport/NID Number"
@@ -170,17 +171,14 @@ export default function TrackServices() {
                     </button>
                   </form>
                 ) : (
-                  <div className=" w-full mx-auto py-4 overflow-hidden ">
-                    <div className="flex flex-col lg:flex-row bg-white rounded-xl shadow-md overflow-hidden border-4 border-white">
-                      <div className="lg:w-1/2 w-full ">
+                  <div className=" w-full mx-auto py-4 ">
+                    <div className="flex flex-col lg:flex-row bg-white rounded-xl shadow-md border-4 border-white">
+                      <div className="lg:w-1/2 w-full relative">
                         <img
                           src={data.imageUrl}
                           alt="Cindy Crawford"
-                          className="object-cover w-full"
+                          className="object-cover w-full rounded-lg"
                         />
-                      </div>
-
-                      <div className="lg:w-1/2 w-fullf flex flex-col justify-between p-6 relative">
                         <button
                           className=" w-fit absolute right-2 top-2 px-[8px] py-[4px] text-white border-2 border-red-700 bg-red-700
                           rounded-lg hover:bg-transparent hover:text-red-700 hover:border-red-700 duration-200 ease-out select-none cursor-pointer z-50 "
@@ -188,25 +186,78 @@ export default function TrackServices() {
                         >
                           Close
                         </button>
+                        <img
+                          src="images/ribbone.png"
+                          alt="ribbone-mrc"
+                          className=" absolute xl:left-[-80px] xl:top-2 lg:left-[-70px] lg:top-2 md:left-[-60px] md:top-2 sm:left-[-50px] sm:top-2 left-[-50px] top-2 z-50 rotate-[-45deg] xl:w-[250px] lg:w-[220px] md:w-[190px] w-[160px] "
+                        />
+                      </div>
+
+                      <div
+                        id="result-container"
+                        className="lg:w-1/2 w-fullf flex flex-col justify-between px-2  "
+                      >
                         <div className=" flex flex-col justify-baseline ">
-                          <h2 className="xl:text-[32px] lg:text-[32px] md:text-[28px] text-[24px] font-bold text-gray-900 mb-2">
+                          <h2 className=" font-switzer-i tracking-normal xl:text-[48px] lg:text-[34px] md:text-[30px] text-[20px] font-bold text-black mb-2">
                             {data.name}
                           </h2>
 
-                          <p className="text-sm text-gray-700 mb-1">
-                            Service Type: {data.serviceType}
+                          <p className="xl:text-xl lg:text-lg md:text-md text-sm text-black font-G-Sans-medium mb-1">
+                            Service Type -{" "}
+                            <span className=" font-G-Sans ">
+                              {data.serviceType}
+                            </span>
                           </p>
-                          <p className="text-sm text-gray-700 mb-1">
-                            Last Update: {data.date}
+                          <p className="xl:text-xl lg:text-lg md:text-md text-sm text-black font-G-Sans-medium mb-1">
+                            Last Update -{" "}
+                            <span className=" font-G-Sans ">{data.date}</span>
                           </p>
 
-                          <p className="text-sm text-gray-600 mb-4">
+                          <p className="xl:text-xl lg:text-lg md:text-md text-sm text-black font-switzer mb-3">
                             {data.shortNote}
                           </p>
+                          <div className=" w-full ">
+                            {data.status === "Complete" ? (
+                              <div className=" w-full flex xl:justify-start lg:justify-start md:justify-start justify-start items-center xl:gap[16px] lg:gap-[16px] md:gap-[16px] gap-[8px] ">
+                                <span
+                                  className=" text-green-700 px-[8px] py-[4px] bg-green-200 rounded-lg
+                          xl:text-[16px] lg:text-[14px] md:text-[12px] sm:text-[10px] text-[12px] flex items-center gap-[8px] "
+                                >
+                                  Status:
+                                  <p className=" flex items-center gap-[4px] ">
+                                    {data.status}
+                                    <IoMdCloudDone />
+                                  </p>
+                                </span>
+                                <a
+                                  href={data.driveLink}
+                                  target="_blank"
+                                  id="download-link"
+                                  className=" flex items-center gap-[6px] px-[6px] py-[3px] rounded-lg bg-black
+                                  xl:text-[16px] lg:text-[14px] md:text-[12px] sm:text-[10px] text-[12px] text-white select-none 
+                                  hover:bg-transparent hover:text-black duration-300 ease-out "
+                                >
+                                  <FaCloudDownloadAlt />
+                                  Download
+                                </a>
+                              </div>
+                            ) : (
+                              <p
+                                className="text-blue-700 px-[8px] py-[4px] bg-transparent rounded-lg w-fit border border-blue-700
+                        xl:text-[16px] lg:text-[14px] md:text-[12px] sm:text-[10px] text-[12px] flex items-center gap-[8px] "
+                              >
+                                Status:
+                                <span className=" flex items-center gap-[6px] ">
+                                  {data.status}
+                                  <VscServerProcess className=" text-blue-700 " />
+                                </span>
+                              </p>
+                            )}
+                          </div>
                         </div>
 
                         <div className="mt-[24px] ">
-                          <span className="text-[#01395e] font-bold xl:text-sm lg:text-sm md:text-sm text-xs flex items-center gap-[12px] ">
+                          <span className="text-black font-bold xl:text-xl lg:text-xl md:text-xl text-xs flex items-center gap-[12px] ">
                             <p>Thanks for choosing our services!</p>{" "}
                             <img
                               src="images/logomrc.png"
@@ -217,57 +268,17 @@ export default function TrackServices() {
                         </div>
                       </div>
                     </div>
-                    <div className=" w-full mt-[16px] ">
-                      {data.status === "Complete" ? (
-                        <div className=" w-full flex xl:justify-end lg:justify-end md:justify-end justify-between items-center xl:gap[16px] lg:gap-[16px] md:gap-[16px] gap-0 ">
-                          <span
-                            className=" text-green-700 px-[12px] py-[6px] bg-green-200 rounded-lg
-                          xl:text-[22px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] flex items-center gap-[8px] "
-                          >
-                            <span className=" text-black  ">Status: </span>
-                            <p className=" flex items-center gap-[4px] ">
-                              {data.status}
-                              <IoMdCloudDone />
-                            </p>
-                          </span>
-                          <a
-                            href={data.driveLink}
-                            target="_blank"
-                            className=" flex items-center gap-[6px] px-[12px] py-[6px] border-2 border-orange rounded-lg  bg-orange
-                           xl:text-[22px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] text-white select-none
-                             group hover:bg-transparent hover:text-orange hover:border-orange duration-200 ease-out  "
-                          >
-                            <FaCloudDownloadAlt />
-                            Download
-                          </a>
-                        </div>
-                      ) : (
-                        <p
-                          className="text-blue-700 px-[12px] py-[6px] bg-green-200 rounded-lg w-fit
-                        xl:text-[22px] lg:text-[20px] md:text-[18px] sm:text-[16px] text-[14px] flex items-center gap-[8px] "
-                        >
-                          <span className=" text-black flex items-center gap-[4px]">
-                            Status:
-                          </span>
-
-                          <span className=" flex items-center gap-[6px] ">
-                            {data.status}
-                            <VscServerProcess className=" text-blue-700 " />
-                          </span>
-                        </p>
-                      )}
-                    </div>
                   </div>
                 )}
               </>
             )}
 
             {loading && (
-              <div className=" bg-gray-300/60 backdrop-blur-md rounded-xl flex justify-center items-center ">
+              <div className=" w-full h-full flex justify-center items-center ">
                 <img
-                  src="images/Paperplane.gif"
+                  src="images/loading.gif"
                   alt="planeLoadingAnimation"
-                  className=" w-[250px] "
+                  className="w-[70%] rounded-lg "
                 />
               </div>
             )}
@@ -287,7 +298,7 @@ export default function TrackServices() {
           )}
         </motion.div>
         <div className="mt-[24px] bg-white ">
-          <h2 className="font-Gambetta px-[26px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#000000] text-center">
+          <h2 className="font-G-Sans-medium px-[26px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#000000] text-center">
             <b>Need help with any of our services?</b> <br />
             Just reach out to our support team — we’re here for you!
           </h2>

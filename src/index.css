@@ -6,24 +6,54 @@
   --color-green: #047857;
   --color-navyBlue: #11234f;
   --color-orange: #f67a1b;
-  --font-Gambetta: "Gambetta", "sans-serif";
   --font-G-Sans: "G-Sans", "sans-serif";
-  --font-G-Sans-bold: "G-Sans-bold", "sans-serif";
+  --font-G-Sans-medium: "G-Sans-medium", "sans-serif";
+  --font-switzer: "switzer", "sans-serif";
+  --font-switzer-i: "switzer-i", "sans-serif";
+  --font-sharpie: "sharpie", "sans-serif";
+  --font-zina: "zina", "sans-serif";
+  --font-aktura: "aktura", "sans-serif";
+  --font-title: "title", "sans-serif";
 }
 
 @font-face {
-  font-family: Gambetta;
-  src: url(./assets/fonts/Gambetta_Complete/Gambetta_Complete/Fonts/OTF/Gambetta-Regular.otf);
+  font-family: switzer;
+  src: url(./assets/fonts/Switzer_Complete/Switzer_Complete/Fonts/OTF/Switzer-Black.otf);
+  fontmat: "opentype";
+}
+@font-face {
+  font-family: switzer-i;
+  src: url(./assets/fonts/Switzer_Complete/Switzer_Complete/Fonts/OTF/Switzer-BlackItalic.otf);
   fontmat: "opentype";
 }
 @font-face {
   font-family: G-Sans;
-  src: url(./assets/fonts/GeneralSans_Complete/GeneralSans_Complete/Fonts/OTF/GeneralSans-Semibold.otf);
+  src: url(./assets/fonts/GeneralSans_Complete/GeneralSans_Complete/Fonts/OTF/GeneralSans-Light.otf);
   format: "opentype";
 }
 @font-face {
-  font-family: G-Sans-bold;
-  src: url(./assets/fonts/GeneralSans_Complete/GeneralSans_Complete/Fonts/OTF/GeneralSans-Bold.otf);
+  font-family: G-Sans-medium;
+  src: url(./assets/fonts/GeneralSans_Complete/GeneralSans_Complete/Fonts/OTF/GeneralSans-Medium.otf);
+  format: "opentype";
+}
+@font-face {
+  font-family: sharpie;
+  src: url(./assets/fonts/Sharpie_Complete/Sharpie_Complete/Fonts/OTF/Sharpie-Black.otf);
+  format: "opentype";
+}
+@font-face {
+  font-family: zina;
+  src: url(./assets/fonts/Zina_Complete/Zina_Complete/Fonts/OTF/Zina-Regular.otf);
+  format: "opentype";
+}
+@font-face {
+  font-family: aktura;
+  src: url(./assets/fonts/Aktura_Complete/Aktura_Complete/Fonts/OTF/Aktura-Regular.otf);
+  format: "opentype";
+}
+@font-face {
+  font-family: title;
+  src: url(./assets/fonts/NewTitle_Complete/NewTitle_Complete/Fonts/TTF/NewTitle-Variable.ttf);
   format: "opentype";
 }
 
@@ -39,6 +69,7 @@ html {
     rgba(0, 0, 0, 1) 100%
   );
 }
+
 #track-mid-sec {
   background: #343839;
   background: linear-gradient(
@@ -46,6 +77,18 @@ html {
     rgba(52, 56, 57, 1) 0%,
     rgba(0, 0, 0, 1) 100%
   );
+}
+
+.gradient-bg {
+  background: #343839;
+  background: linear-gradient(
+    0deg,
+    rgba(52, 56, 57, 1) 20%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+#result-container {
+
 }
 
 footer {
@@ -59,5 +102,5 @@ body {
   overflow-x: hidden;
 }
 body {
-  background-color: #ffffff;
+  background-color: #000000;
 }

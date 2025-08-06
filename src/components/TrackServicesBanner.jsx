@@ -13,9 +13,12 @@ const TrackServicesBanner = () => {
       viewport={{ once: true }}
       className=" h-full max-h-screen drop-shadow-lg overflow-hidden relative "
     >
-      <video autoPlay loop playsInline muted className=" ">
-        <source src="video/trackvid2.mp4" type="video/mp4" />
-      </video>
+      <Link to="#mid-form-top" smooth  >
+        <video autoPlay loop playsInline muted className=" w-full mx-auto ">
+          <source src="video/trackvid2.mp4" type="video/mp4" />
+        </video>
+      </Link>
+
       <Link
         to="#mid-form-top"
         smooth
