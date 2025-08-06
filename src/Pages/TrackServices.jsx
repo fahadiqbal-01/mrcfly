@@ -163,7 +163,7 @@ export default function TrackServices() {
                     />
                     <button
                       type="submit"
-                      className="flex justify-center items-center gap-[6px] font-G-Sans xl:text-[18px] lg:text-[14px] md:text-[12px] text-[10px] text-white leading-[28px] tracking-[6px]
+                      className="flex justify-center items-center gap-[6px] font-G-Sans-medium xl:text-[18px] lg:text-[14px] md:text-[12px] text-[10px] text-white leading-[28px] tracking-[6px]
             bg-orange border-2 border-transparent xl:px-[34px] xl:py-[17px] lg:px-[30px] lg:py-[14px] md:px-[24px] md:py-[10px] px-[10px] py-[6px] rounded-[8px] cursor-pointer  select-none "
                       disabled={loading}
                     >
