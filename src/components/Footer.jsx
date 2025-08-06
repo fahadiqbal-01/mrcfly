@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <footer>
       <Container>
-        <div className=" grid grid-cols-4 pt-[48px] pb-[32px] border-b-2 border-gray-600 xl:px-0 lg:px-0 md:px-4 px-[20px] ">
+        <div className=" grid grid-cols-4 pt-[48px] pb-[32px] border-b-2 border-white/50 xl:px-0 lg:px-0 md:px-4 px-[20px] ">
           <div className=" col-span-2 ">
             <Link to="/">
               <img
