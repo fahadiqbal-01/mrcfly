@@ -18,7 +18,7 @@ const Footer = () => {
               <img
                 src="/images/logomrcsec.png"
                 alt="mrclogo"
-                className=" xl:w-[100px] lg:w-[80px] md:w-[60px] w-[76px] xl:mb-[16px] lg:mb-[12px] md:mb-[8px] mb-[4px]  "
+                className=" xl:w-[100px] lg:w-[80px] md:w-[60px] w-[76px] xl:mb-[16px] lg:mb-[12px] mb-[8px]  "
               />
             </Link>
 
