@@ -17,6 +17,7 @@ import StudentVisa from "./Pages/StudentVisa";
 import Touristvisa from "./Pages/Touristvisa";
 import NotFound from "./Pages/NotFound";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   const router = createBrowserRouter(
@@ -42,6 +43,7 @@ function App() {
   return (
     <>
       <Analytics />
+      <SpeedInsights />
       <RouterProvider router={router} />
     </>
   );
