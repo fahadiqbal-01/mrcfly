@@ -19,7 +19,7 @@
       gtag("config", "G-2Z9XTG0GYH");
     </script>
   </head>
-  <body>
+  <body class=" bg-black " >
     <div id="root"></div>
 
     <!-- Vite will inject scripts here during build -->
