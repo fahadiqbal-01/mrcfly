@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const footerLinkItemClass = "xl:mt-[8px] lg:mt-[2px] md:mt-0 mt-[-4px] ";
 const footerLinkClass =
-  "text-[#9CA3AF] xl:text-[18px] text-[14px]  xl:leading-[24px] lg:leading-[16px] md:leading-[12px] font-G-Sans hover:text-gray-500 duration-200 ease-out cursor-pointer";
+  "text-white/80 xl:text-[18px] text-[14px] xl:leading-[24px] lg:leading-[16px] md:leading-[12px] font-G-Sans hover:text-gray-500 duration-200 ease-out cursor-pointer";
 
 const Footer = () => {
   return (
@@ -22,7 +22,7 @@ const Footer = () => {
               />
             </Link>
 
-            <p className=" text-[#9CA3AF] xl:text-[16px] text-[14px] xl:leading-[24px] lg:leading-[16px] leading-[14px] 
+            <p className=" text-white/80 xl:text-[16px] text-[14px] xl:leading-[24px] lg:leading-[16px] leading-[14px] 
             font-G-Sans xl:w-[570px] lg:w-[440px] md:w-[320px] sm:w-[240px] w-[150px] ">
               Your trusted partner for job applications, work permits, student
               visas, and tourist visa services — providing expert guidance,
@@ -83,11 +83,11 @@ const Footer = () => {
               Contact Info
             </label>
             <div className=" font-G-Sans flex flex-col items-start xl:gap-[10px] lg:gap-[10px] md:gap-[10px] gap-[-8px] xl:mt-[16px] lg:mt-[12px] md:mt-[8px] mt-[4px] ">
-              <h3 className="flex items-center justify-center gap-[6px] font-Gsans text-[14px] leading-[20px] text-[#9CA3AF] ">
+              <h3 className="flex items-center justify-center gap-[6px] font-Gsans text-[14px] leading-[20px] text-white/80 ">
                 <IoCallOutline className="text-[14px] " />
                 +880 182 5419803
               </h3>
-              <h4 className="font-G-Sans flex items-center justify-center gap-[6px] font-Gsans text-[14px] leading-[20px] text-[#9CA3AF] ">
+              <h4 className="font-G-Sans flex items-center justify-center gap-[6px] font-Gsans text-[14px] leading-[20px] text-white/80 ">
                 <CiMail className="text-[14px] " />
                 info@mrcfly.com
               </h4>
@@ -95,10 +95,10 @@ const Footer = () => {
           </div>
         </div>
         <div className=" pt-[33px] pb-[48px] flex flex-col justify-center items-center  ">
-          <p className="font-G-Sans  text-[#9CA3AF] xl:text-[14px] lg:text-[12px] text-[10px] ">
+          <p className="font-G-Sans  text-white/80 xl:text-[14px] lg:text-[12px] text-[10px] ">
             © 2025 MRC. All rights reserved.
           </p>
-          {/* <p className=" text-[#9CA3AF] xl:text-[14px] lg:text-[12px] text-[10px] mt-[6px] ">
+          {/* <p className=" text-white/80 xl:text-[14px] lg:text-[12px] text-[10px] mt-[6px] ">
             Made by <a href="" className=" text-orange select-none  " >Fahad Iqbal</a>
           </p> */}
         </div>
