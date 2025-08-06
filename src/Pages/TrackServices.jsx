@@ -124,8 +124,8 @@ export default function TrackServices() {
             Track Your Service
           </motion.h3>
           <motion.h4
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true }}
             className="mt-[16px] text-[#4B5563] font-G-Sans-medium text-[18px] leading-[28px] xl:px-0 lg:px-0 md:px-0 px-[20px]"
@@ -310,11 +310,21 @@ export default function TrackServices() {
           )}
         </motion.div>
         <div className="mt-[24px] bg-white ">
-          <h2 className="font-G-Sans-medium px-[26px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#000000] text-center">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="font-G-Sans-medium px-[26px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#000000] text-center"
+          >
             <b>Need help with any of our services?</b> <br />
             Just reach out to our support team — we’re here for you!
-          </h2>
-          <div
+          </motion.h2>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
             className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-row flex-col items-center justify-center
         xl:gap-[16px] lg:gap-[16px] md:gap-[12px] gap-[4px] xl:mt-[16px] lg:mt-[16px] md:mt-[16px] mt-[18px] "
           >
@@ -326,7 +336,7 @@ export default function TrackServices() {
               <CiMail className="xl:text-[14px] lg:text-[12px] md:text-[10px]" />
               info@mrcfly.com
             </h4>
-          </div>
+          </motion.div>
         </div>
       </Container>
 
