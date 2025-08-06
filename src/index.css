@@ -93,9 +93,7 @@ html {
     rgba(0, 0, 0, 1) 100%
   );
 }
-#result-container {
 
-}
 
 footer {
   background: #000000;
@@ -107,6 +105,4 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
-body {
-  background-color: #000000;
-}
+
