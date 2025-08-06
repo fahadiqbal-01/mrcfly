@@ -7,7 +7,6 @@ const RootLayout = () => {
   return (
     <>
       <Navbar />
-      {/* It's good practice to wrap your page content in a <main> tag for accessibility */}
       <main>
         <Outlet />
       </main>

@@ -16,6 +16,7 @@ import WorkPermit from "./Pages/WorkPermit";
 import StudentVisa from "./Pages/StudentVisa";
 import Touristvisa from "./Pages/Touristvisa";
 import NotFound from "./Pages/NotFound";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const router = createBrowserRouter(
@@ -40,6 +41,7 @@ function App() {
 
   return (
     <>
+      <Analytics />
       <RouterProvider router={router} />
     </>
   );
