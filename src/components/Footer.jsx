@@ -108,8 +108,8 @@ const Footer = () => {
               className=" text-orange select-none  "
             >
               Fahad Iqbal
-            </a>  */}
-          </p>
+            </a>  
+          </p>*/}
         </div>
       </Container>
     </footer>
