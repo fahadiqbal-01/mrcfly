@@ -267,7 +267,7 @@ export default function TrackServices() {
                             )}
                           </div>
                         </div>
-                        <div className=" flex justify-between items-center mt-[36px]">
+                        <div className=" flex justify-between items-center mt-[32px]">
                           <div className=" p-4 flex items-center gap-2  ">
                             <p className=" text-white xl:text-lg lg:text-lg md:text-md text-sm text-center ">
                               @mrcfly
@@ -276,17 +276,17 @@ export default function TrackServices() {
                               <img
                                 src="images/instagram.png"
                                 alt=""
-                                className="xl:w-[25px] lg:w-[20px] w-[15px] select-none cursor-pointer grayscale-0 hover:grayscale-100 duration-300 ease-out "
+                                className="xl:w-[25px] w-[20px] select-none cursor-pointer grayscale-0 hover:grayscale-100 duration-300 ease-out "
                               />
                               <img
                                 src="images/facebook.png"
                                 alt=""
-                                className="xl:w-[25px] lg:w-[20px] w-[15px] select-none cursor-pointer grayscale-0 hover:grayscale-100 duration-300 ease-out "
+                                className="xl:w-[25px] w-[20px] select-none cursor-pointer grayscale-0 hover:grayscale-100 duration-300 ease-out "
                               />
                               <img
                                 src="images/whatsapp.png"
                                 alt=""
-                                className="xl:w-[25px] lg:w-[20px] w-[15px] select-none cursor-pointer grayscale-0 hover:grayscale-100 duration-300 ease-out "
+                                className="xl:w-[25px] w-[20px] select-none cursor-pointer grayscale-0 hover:grayscale-100 duration-300 ease-out "
                               />
                             </div>
                           </div>
