@@ -115,8 +115,8 @@ export default function TrackServices() {
           className="pt-[80px] text-center"
         >
           <motion.h3
-            initial={{ scale: 0 }}
-            whileInView={{ scale: 1 }}
+            initial={{ y: 20 }}
+            whileInView={{ y: 0 }}
             transition={{ delay: 0.5, duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true }}
             className="font-switzer-i xl:text-[48px] lg:text-[38px] md:text-[28px] text-[24px] leading-[36px] text-black"
