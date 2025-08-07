@@ -203,34 +203,26 @@ export default function TrackServices() {
                         >
                           Close
                         </button>
-                        <img
-                          src="images/ribbone.png"
-                          alt="ribbone-mrc"
-                          className=" absolute xl:left-[-80px] xl:top-2 lg:left-[-70px] lg:top-2 md:left-[-60px] md:top-2 sm:left-[-50px] sm:top-2 left-[-50px] top-2 z-50 rotate-[-45deg] xl:w-[250px] lg:w-[220px] md:w-[190px] w-[160px] "
-                        />
                       </div>
 
                       <div
                         id="result-container"
                         className="lg:w-1/2 w-full md:w-[70%] sm:w-[50%] mx-auto flex flex-col justify-between xl:pt-38 lg:pt-26 pt-8  "
                       >
-                        <div className=" flex flex-col items-start xl:px-6 lg:px-6 px-0 ">
-                          <h2 className=" font-stardom tracking-normal xl:text-[42px] lg:text-[30px] md:text-[30px] text-[24px] font-bold text-white mb-2 ">
+                        <div className=" flex flex-col items-start xl:pl-10 lg:pl-6 pl-0 ">
+                          <h2 className=" font-switzer xl:text-[42px] lg:text-[30px] md:text-[30px] text-[24px] font-bold text-white mb-2 ">
                             {data.name}
                           </h2>
 
-                          <p className="xl:text-lg lg:text-lg text-md text-gray-300 font-G-Sans-medium mb-1">
-                            Service Type -{" "}
-                            <span className=" font-G-Sans ">
-                              {data.serviceType}
-                            </span>
+                          <p className="xl:text-lg lg:text-lg text-md text-gray-300 font-G-Sans mb-1">
+                            Service Type - {data.serviceType}
+
                           </p>
-                          <p className="xl:text-lg lg:text-lg text-md text-gray-300 font-G-Sans-medium mb-1">
-                            Last Update -
-                            <span className=" font-G-Sans ">{data.date}</span>
+                          <p className="xl:text-lg lg:text-lg text-md text-gray-300 font-G-Sans mb-1">
+                            Last Update - {data.date}
                           </p>
 
-                          <p className="xl:text-2xl lg:text-lg text-md text-gray-300 font-G-Sans-medium mb-6  ">
+                          <p className="xl:text-2xl lg:text-lg text-md text-gray-300 font-G-Sans-medium mb-6 ">
                             {data.shortNote}
                           </p>
                           <div className=" w-full ">
@@ -238,7 +230,7 @@ export default function TrackServices() {
                               <div className=" w-full flex justify-start xl:gap[16px] lg:gap-[16px] md:gap-[16px] gap-[8px] ">
                                 <span
                                   className=" text-green-800 bg-green-300 xl:p-[25px] lg:p-[25px] md:p-[20px] p-[16px] rounded-full
-                                 text-[16px] flex items-start gap-[8px] "
+                                 xl:text-[18px] text-[16px] flex items-start gap-[8px] font-G-Sans-medium select-none "
                                 >
                                   <p className=" flex items-center gap-[4px] ">
                                     {data.status}
@@ -250,7 +242,7 @@ export default function TrackServices() {
                                   target="_blank"
                                   id="download-link"
                                   className=" flex items-center gap-[6px] xl:p-[25px] lg:p-[25px] md:p-[20px] p-[16px] rounded-full bg-gray-400
-                                  xl:text-[16px] lg:text-[14px] md:text-[12px] sm:text-[10px] text-[12px] text-black select-none 
+                                  xl:text-[18px] text-[16px]  text-black select-none font-G-Sans-medium
                                   hover:bg-transparent hover:text-white duration-300 ease-out z-50 "
                                 >
                                   <FaCloudDownloadAlt />
@@ -260,7 +252,7 @@ export default function TrackServices() {
                             ) : (
                               <p
                                 className="text-blue-500 w-fit xl:p-[25px] lg:p-[25px] md:p-[20px] p-[16px] bg-blue-300 rounded-full
-                                text-[16px] flex justify-start items-start gap-[8px] "
+                                xl:text-[18px] text-[16px] flex justify-start items-start gap-[8px] font-G-Sans-medium select-none "
                               >
                                 <span className=" flex justify-center items-center gap-[6px] ">
                                   {data.status}
