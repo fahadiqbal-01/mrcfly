@@ -291,7 +291,10 @@ export default function TrackServices() {
                                 className="xl:w-[25px] w-[20px] select-none cursor-pointer scale-100 hover:scale-[1.1] duration-300 ease-out "
                               />
                             </a>
-                            <a href="https://wa.me/<number>" target="_blank">
+                            <a
+                              href="https://wa.me/8801825419803"
+                              target="_blank"
+                            >
                               <img
                                 src="images/whatsapp.png"
                                 alt=""
