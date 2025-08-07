@@ -189,12 +189,12 @@ export default function TrackServices() {
                     transition={{ delay: 0.5, duration: 0.7, ease: "easeOut" }}
                     className=" w-full mx-auto py-4 "
                   >
-                    <div className="flex flex-col lg:flex-row bg-transparent rounded-xl drop-shadow-2xl shadow-2xl ">
+                    <div className="flex flex-col lg:flex-row bg-transparent  ">
                       <div className="lg:w-1/2 w-full md:w-[70%] sm:w-[50%] mx-auto relative">
                         <img
                           src={data.imageUrl}
                           alt="Cindy Crawford"
-                          className="object-cover w-full rounded-lg"
+                          className="object-cover w-full xl:rounded-full lg:rounded-full md:rounded-lg rounded-md"
                         />
                         <button
                           className=" w-fit absolute right-2 top-2 px-[8px] py-[4px] text-white border-2 border-red-700 bg-red-700
@@ -212,35 +212,34 @@ export default function TrackServices() {
 
                       <div
                         id="result-container"
-                        className="lg:w-1/2 w-fullf flex flex-col justify-between pt-8 "
+                        className="lg:w-1/2 w-full md:w-[70%] sm:w-[50%] mx-auto flex flex-col justify-between xl:pt-42 lg:pt-26 pt-8  "
                       >
-                        <div className=" flex flex-col justify-baseline ">
-                          <h2 className=" font-stardom tracking-normal xl:text-[42px] lg:text-[30px] md:text-[30px] text-[24px] font-bold text-white mb-2 text-center">
+                        <div className=" flex flex-col items-start xl:px-6 lg:px-6 px-0 ">
+                          <h2 className=" font-stardom tracking-normal xl:text-[42px] lg:text-[30px] md:text-[30px] text-[24px] font-bold text-white mb-2 ">
                             {data.name}
                           </h2>
 
-                          <p className="xl:text-lg lg:text-lg text-md text-center text-gray-300 font-G-Sans-medium mb-1">
+                          <p className="xl:text-lg lg:text-lg text-md text-gray-300 font-G-Sans-medium mb-1">
                             Service Type -{" "}
                             <span className=" font-G-Sans ">
                               {data.serviceType}
                             </span>
                           </p>
-                          <p className="xl:text-lg lg:text-lg text-md text-center text-gray-300 font-G-Sans-medium mb-1">
-                            Last Update -{" "}
+                          <p className="xl:text-lg lg:text-lg text-md text-gray-300 font-G-Sans-medium mb-1">
+                            Last Update -
                             <span className=" font-G-Sans ">{data.date}</span>
                           </p>
 
-                          <p className="xl:text-2xl lg:text-lg text-md text-center text-gray-300 font-G-Sans-medium mb-4 w-[80%] mx-auto ">
+                          <p className="xl:text-2xl lg:text-lg text-md text-gray-300 font-G-Sans-medium mb-6  ">
                             {data.shortNote}
                           </p>
                           <div className=" w-full ">
                             {data.status === "Complete" ? (
-                              <div className=" w-full flex justify-center items-center xl:gap[16px] lg:gap-[16px] md:gap-[16px] gap-[8px] ">
+                              <div className=" w-full flex justify-start xl:gap[16px] lg:gap-[16px] md:gap-[16px] gap-[8px] ">
                                 <span
-                                  className=" text-green-800 px-[8px] py-[4px] bg-transparent rounded-lg
-                                 text-[16px] flex items-center gap-[8px] "
+                                  className=" text-green-800 bg-green-300 xl:p-[25px] lg:p-[25px] md:p-[20px] p-[16px] rounded-full
+                                 text-[16px] flex items-start gap-[8px] "
                                 >
-                                  Status:
                                   <p className=" flex items-center gap-[4px] ">
                                     {data.status}
                                     <IoMdCloudDone />
@@ -250,9 +249,9 @@ export default function TrackServices() {
                                   href={data.driveLink}
                                   target="_blank"
                                   id="download-link"
-                                  className=" flex items-center gap-[6px] px-[8px] py-[4px] rounded-lg bg-gray-400
+                                  className=" flex items-center gap-[6px] xl:p-[25px] lg:p-[25px] md:p-[20px] p-[16px] rounded-full bg-gray-400
                                   xl:text-[16px] lg:text-[14px] md:text-[12px] sm:text-[10px] text-[12px] text-black select-none 
-                                  hover:bg-transparent hover:text-white duration-300 ease-out "
+                                  hover:bg-transparent hover:text-white duration-300 ease-out z-50 "
                                 >
                                   <FaCloudDownloadAlt />
                                   Download
@@ -260,10 +259,9 @@ export default function TrackServices() {
                               </div>
                             ) : (
                               <p
-                                className="text-blue-500 px-[8px] py-[4px] bg-transparent rounded-lg w-fit 
-                                text-[16px] flex justify-center items-center gap-[8px] mx-auto "
+                                className="text-blue-500 w-fit xl:p-[25px] lg:p-[25px] md:p-[20px] p-[16px] bg-blue-300 rounded-full
+                                text-[16px] flex justify-start items-start gap-[8px] "
                               >
-                                Status:
                                 <span className=" flex justify-center items-center gap-[6px] ">
                                   {data.status}
                                   <VscServerProcess className=" text-blue-500 " />

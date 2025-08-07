@@ -94,7 +94,6 @@ html {
   );
 }
 
-
 footer {
   background: #000000;
 }
@@ -103,9 +102,9 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-body{
-  background: black !important ;
+body {
+  background: black ;
 }
