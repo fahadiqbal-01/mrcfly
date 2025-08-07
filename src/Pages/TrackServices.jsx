@@ -270,14 +270,14 @@ export default function TrackServices() {
                               <img
                                 src="images/mail.png"
                                 alt=""
-                                className="xl:w-[28px] w-[23px] select-none cursor-pointer grayscale-0 hover:grayscale-100 duration-300 ease-out "
+                                className="xl:w-[28px] w-[23px] select-none cursor-pointer scale-100 hover:scale-[1.1] duration-300 ease-out "
                               />
                             </a>
                             <a href="">
                               <img
                                 src="images/twitter.png"
                                 alt=""
-                                className="xl:w-[25px] w-[20px] select-none cursor-pointer grayscale-0 hover:grayscale-100 duration-300 ease-out invert-100 "
+                                className="xl:w-[25px] w-[20px] select-none cursor-pointer scale-100 hover:scale-[1.1] duration-300 ease-out invert-100 "
                               />
                             </a>
                             <a
@@ -288,14 +288,14 @@ export default function TrackServices() {
                               <img
                                 src="images/facebook.png"
                                 alt=""
-                                className="xl:w-[25px] w-[20px] select-none cursor-pointer grayscale-0 hover:grayscale-100 duration-300 ease-out "
+                                className="xl:w-[25px] w-[20px] select-none cursor-pointer scale-100 hover:scale-[1.1] duration-300 ease-out "
                               />
                             </a>
-                            <a href="https://wa.me/<number>" target="_blank" >
+                            <a href="https://wa.me/<number>" target="_blank">
                               <img
                                 src="images/whatsapp.png"
                                 alt=""
-                                className="xl:w-[25px] w-[20px] select-none cursor-pointer grayscale-0 hover:grayscale-100 duration-300 ease-out "
+                                className="xl:w-[25px] w-[20px] select-none cursor-pointer scale-100 hover:scale-[1.1] duration-300 ease-out "
                               />
                             </a>
                           </div>
