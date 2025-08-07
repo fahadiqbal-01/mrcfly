@@ -271,7 +271,7 @@ export default function TrackServices() {
                           </div>
                         </div>
                         <div className=" flex justify-between items-center mt-[32px]">
-                          <div className=" p-4 flex items-center gap-2  ">
+                          <div className=" flex items-center gap-2  ">
                             <p className=" text-white xl:text-lg lg:text-lg md:text-md text-sm text-center ">
                               @mrcfly
                             </p>
