@@ -212,7 +212,7 @@ export default function TrackServices() {
 
                       <div
                         id="result-container"
-                        className="lg:w-1/2 w-full md:w-[70%] sm:w-[50%] mx-auto flex flex-col justify-between xl:pt-42 lg:pt-26 pt-8  "
+                        className="lg:w-1/2 w-full md:w-[70%] sm:w-[50%] mx-auto flex flex-col justify-between xl:pt-38 lg:pt-26 pt-8  "
                       >
                         <div className=" flex flex-col items-start xl:px-6 lg:px-6 px-0 ">
                           <h2 className=" font-stardom tracking-normal xl:text-[42px] lg:text-[30px] md:text-[30px] text-[24px] font-bold text-white mb-2 ">
