@@ -194,7 +194,7 @@ export default function TrackServices() {
                         <img
                           src={data.imageUrl}
                           alt="Cindy Crawford"
-                          className="object-cover w-full xl:rounded-full lg:rounded-full md:rounded-lg rounded-md"
+                          className="object-cover w-full xl:rounded-full lg:rounded-full md:rounded-lg rounded-md "
                         />
                         <button
                           className=" w-fit absolute right-2 top-2 px-[8px] py-[4px] text-white border-2 border-red-700 bg-red-700
@@ -207,7 +207,7 @@ export default function TrackServices() {
 
                       <div
                         id="result-container"
-                        className="lg:w-1/2 w-full md:w-[70%] sm:w-[50%] mx-auto flex flex-col justify-between xl:pt-38 lg:pt-26 pt-8  "
+                        className="lg:w-1/2 w-full md:w-[70%] sm:w-[50%] mx-auto flex flex-col justify-between xl:pt-34 lg:pt-18 pt-8 "
                       >
                         <div className=" flex flex-col items-start xl:pl-10 lg:pl-6 pl-0 ">
                           <h2 className=" font-switzer xl:text-[42px] lg:text-[30px] md:text-[30px] text-[24px] font-bold text-white mb-2 ">
@@ -216,7 +216,6 @@ export default function TrackServices() {
 
                           <p className="xl:text-lg lg:text-lg text-md text-gray-300 font-G-Sans mb-1">
                             Service Type - {data.serviceType}
-
                           </p>
                           <p className="xl:text-lg lg:text-lg text-md text-gray-300 font-G-Sans mb-1">
                             Last Update - {data.date}
@@ -261,30 +260,46 @@ export default function TrackServices() {
                               </p>
                             )}
                           </div>
+                          <p className="text-white font-bold xl:text-xl lg:text-xl md:text-xl text-[14px] mt-[16px] ">
+                            Thanks for choosing our services!
+                          </p>
                         </div>
                         <div className=" flex justify-between items-center mt-[32px]">
-                          <div className=" flex items-center gap-2  ">
-                            <p className=" text-white xl:text-lg lg:text-lg md:text-md text-sm text-center ">
-                              @mrcfly
-                            </p>
-                            <div className=" flex justify-center items-center gap-3 ">
+                          <div className=" flex justify-center items-center gap-3 ">
+                            <a href="mailto:info@mrcfly.com">
                               <img
-                                src="images/instagram.png"
+                                src="images/mail.png"
                                 alt=""
-                                className="xl:w-[25px] w-[20px] select-none cursor-pointer grayscale-0 hover:grayscale-100 duration-300 ease-out "
+                                className="xl:w-[28px] w-[23px] select-none cursor-pointer grayscale-0 hover:grayscale-100 duration-300 ease-out "
                               />
+                            </a>
+                            <a href="">
+                              <img
+                                src="images/twitter.png"
+                                alt=""
+                                className="xl:w-[25px] w-[20px] select-none cursor-pointer grayscale-0 hover:grayscale-100 duration-300 ease-out invert-100 "
+                              />
+                            </a>
+                            <a
+                              href="https://www.facebook.com/moonrajchowdhuryofficial"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               <img
                                 src="images/facebook.png"
                                 alt=""
                                 className="xl:w-[25px] w-[20px] select-none cursor-pointer grayscale-0 hover:grayscale-100 duration-300 ease-out "
                               />
+                            </a>
+                            <a href="https://wa.me/<number>" target="_blank" >
                               <img
                                 src="images/whatsapp.png"
                                 alt=""
                                 className="xl:w-[25px] w-[20px] select-none cursor-pointer grayscale-0 hover:grayscale-100 duration-300 ease-out "
                               />
-                            </div>
+                            </a>
                           </div>
+
                           <img
                             src="images/logomrcsec.png"
                             alt="mrclogo"
@@ -292,11 +307,6 @@ export default function TrackServices() {
                           />
                         </div>
                       </div>
-                    </div>
-                    <div className="mt-[24px]  ">
-                      <p className="text-white font-bold xl:text-xl lg:text-xl md:text-xl text-[14px]">
-                        Thanks for choosing our services!
-                      </p>
                     </div>
                   </motion.div>
                 )}
