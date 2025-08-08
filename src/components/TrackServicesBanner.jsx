@@ -17,16 +17,12 @@ const TrackServicesBanner = () => {
   }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ delay: 0.5, duration: 0.7, ease: "easeInOut" }}
-      viewport={{ once: true }}
+    <div
       className=" h-full max-h-screen drop-shadow-lg overflow-hidden relative "
     >
       <Link to="#mid-form-top" smooth  >
         <video autoPlay loop playsInline muted className=" w-full mx-auto ">
-          <source src="video/trackvid2.mp4" type="video/mp4" />
+          <source src="video/trackvid2.mp4" type="video/mp4" media="(min-width: 1024px" />
         </video>
       </Link>
 
@@ -42,7 +38,7 @@ const TrackServicesBanner = () => {
         ></div>
         Click here to Track your services
       </Link>
-    </motion.div>
+    </div>
   );
 };
 
