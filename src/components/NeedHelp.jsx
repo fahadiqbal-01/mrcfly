@@ -14,15 +14,11 @@ const NeedHelp = () => {
       className=" bg-transparent text-center overflow-hidden py-[80px] xl:mb-0 lg:mb-0 md:mb-0 sm:mb-0 mb-[-65px] relative "
     >
       <div className=" relative z-10  ">
-        <motion.h2
-          initial={{ y: 50 }}
-          whileInView={{ y: 0 }}
-          transition={{ duration: 0.7, ease: easeOut }}
-          viewport={{ once: true }}
+        <h2
           className=" font-switzer-i xl:text-[48px] lg:text-[38px] text-[28px]  leading-[40px] text-orange"
         >
           Need Help?
-        </motion.h2>
+        </h2>
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
