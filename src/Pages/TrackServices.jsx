@@ -373,11 +373,11 @@ export default function TrackServices() {
             className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-row flex-col items-center justify-center
         xl:gap-[16px] lg:gap-[16px] md:gap-[12px] gap-[4px] xl:mt-[16px] lg:mt-[16px] md:mt-[16px] mt-[18px] "
           >
-            <h3 className="flex items-center justify-center gap-[6px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#000000]">
+            <h3 className="flex items-center justify-center gap-[6px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] no-underline text-[#000000]">
               <IoCallOutline className="xl:text-[14px] lg:text-[12px] md:text-[10px]" />
               +880 182 5419803
             </h3>
-            <h4 className="flex items-center justify-center gap-[6px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#000000]">
+            <h4 className="flex items-center justify-center gap-[6px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] no-underline text-[#000000]">
               <CiMail className="xl:text-[14px] lg:text-[12px] md:text-[10px]" />
               info@mrcfly.com
             </h4>

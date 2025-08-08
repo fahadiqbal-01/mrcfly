@@ -85,11 +85,11 @@ const Footer = () => {
               Contact Info
             </label>
             <div className=" font-G-Sans flex flex-col items-start xl:gap-[10px] lg:gap-[10px] md:gap-[10px] gap-[-8px] xl:mt-[16px] lg:mt-[12px] md:mt-[8px] mt-[4px] ">
-              <h3 className="flex items-center justify-center gap-[6px] font-Gsans text-[14px] leading-[20px] text-white/80 ">
+              <h3 className="flex items-center justify-center gap-[6px] font-Gsans text-[14px] leading-[20px] text-white/80 no-underline ">
                 <IoCallOutline className="text-[14px] " />
                 +880 182 5419803
               </h3>
-              <h4 className="font-G-Sans flex items-center justify-center gap-[6px] font-Gsans text-[14px] leading-[20px] text-white/80 ">
+              <h4 className="font-G-Sans flex items-center justify-center gap-[6px] font-Gsans text-[14px] leading-[20px] no-underline text-white/80 ">
                 <CiMail className="text-[14px] " />
                 info@mrcfly.com
               </h4>
