@@ -102,7 +102,7 @@ export default function TrackServices() {
   };
 
   return (
-    <section id="track-mid" className=" bg-[#ffffff] ">
+    <section id="track-mid" className=" bg-white ">
       <TrackServicesBanner />
       <TrackServicesBannerSec />
       <Container className=" mb-[80px] ">
@@ -165,7 +165,7 @@ export default function TrackServices() {
                   >
                     <input
                       id="service-id-input"
-                      className=" font-G-Sans-medium bg-[#ffffff] xl:px-[25px] xl:py-[19px] lg:px-[20px] lg:py-[16px] px-[16px] py-[12px]
+                      className=" font-G-Sans-medium bg-white xl:px-[25px] xl:py-[19px] lg:px-[20px] lg:py-[16px] px-[16px] py-[12px]
           w-full xl:max-w-[610px] lg:max-w-[510px] md:max-w-[410px] max-w-[310px] border-2 border-[#9CA3AF] rounded-[8px]
           focus:outline-none focus:border-orange xl:placeholder:text-[18px] lg:placeholder:text-[16px] md:placeholder:text-[14px] placeholder:select-none placeholder:font-G-Sans no-arrows "
                       type="text"
@@ -360,7 +360,7 @@ export default function TrackServices() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="font-G-Sans-medium px-[26px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-[#000000] text-center"
+            className="font-G-Sans-medium px-[26px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] text-black text-center"
           >
             <b>Need help with any of our services?</b> <br />
             Just reach out to our support team — we’re here for you!
@@ -373,11 +373,11 @@ export default function TrackServices() {
             className="flex xl:flex-row lg:flex-row md:flex-row sm:flex-row flex-col items-center justify-center
         xl:gap-[16px] lg:gap-[16px] md:gap-[12px] gap-[4px] xl:mt-[16px] lg:mt-[16px] md:mt-[16px] mt-[18px] "
           >
-            <h3 className="flex items-center justify-center gap-[6px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] no-underline text-[#000000]">
+            <h3 className="flex items-center justify-center gap-[6px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] no-underline text-black">
               <IoCallOutline className="xl:text-[14px] lg:text-[12px] md:text-[10px]" />
               +880 182 5419803
             </h3>
-            <h4 className="flex items-center justify-center gap-[6px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] no-underline text-[#000000]">
+            <h4 className="flex items-center justify-center gap-[6px] xl:text-[14px] lg:text-[12px] md:text-[10px] leading-[20px] no-underline text-black">
               <CiMail className="xl:text-[14px] lg:text-[12px] md:text-[10px]" />
               info@mrcfly.com
             </h4>

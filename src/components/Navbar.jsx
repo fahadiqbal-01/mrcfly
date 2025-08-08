@@ -36,7 +36,7 @@ const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className="py-[16px] bg-[#000000] xl:px-0 lg:px-0 md:px-4 px-0 relative  "
+      className="py-[16px] bg-black xl:px-0 lg:px-0 md:px-4 px-0 relative  "
     >
       <Container className="flex flex-row items-center justify-between ">
         <NavLink to="/">

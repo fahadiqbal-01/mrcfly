@@ -17,7 +17,7 @@ const TrackServicesBannerSec = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5, duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true }}
-          className=" text-[#FFFFFF] "
+          className=" text-white "
         >
           Track Your
         </motion.p>
