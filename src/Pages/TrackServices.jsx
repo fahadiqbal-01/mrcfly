@@ -190,7 +190,9 @@ export default function TrackServices() {
                     className=" w-full mx-auto py-4 "
                   >
                     <div className="flex flex-col lg:flex-row bg-transparent  ">
-                      <div className="lg:w-1/2 w-full md:w-[70%] sm:w-[50%] mx-auto relative">
+                      <div
+                        className="lg:w-1/2 w-full md:w-[70%] sm:w-[50%] mx-auto relative"
+                      >
                         <img
                           src={data.imageUrl}
                           alt="Cindy Crawford"
@@ -209,8 +211,10 @@ export default function TrackServices() {
                         id="result-container"
                         className="lg:w-1/2 w-full md:w-[70%] sm:w-[50%] mx-auto flex flex-col justify-between xl:pt-34 lg:pt-18 pt-8 "
                       >
-                        <div className=" flex flex-col items-start xl:pl-10 lg:pl-6 pl-0 ">
-                          <h2 className=" font-switzer xl:text-[42px] lg:text-[30px] md:text-[30px] text-[24px] font-bold text-white mb-2 ">
+                        <div
+                          className=" flex flex-col items-start xl:pl-10 lg:pl-6 pl-0 "
+                        >
+                          <h2 className=" font-switzersec xl:text-[42px] lg:text-[30px] md:text-[30px] text-[24px] font-bold text-white mb-2 ">
                             {data.name}
                           </h2>
 
@@ -264,7 +268,17 @@ export default function TrackServices() {
                             Thanks for choosing our services!
                           </p>
                         </div>
-                        <div className=" flex justify-between items-center mt-[32px]">
+                        <motion.div
+                          initial={{ opacity: 0}}
+                          whileInView={{ opacity: 1}}
+                          transition={{
+                            delay: 0.5,
+                            duration: 0.7,
+                            ease: "easeOut",
+                          }}
+                          viewport={{ once: true }}
+                          className=" flex justify-between items-center mt-[32px]"
+                        >
                           <div className=" flex justify-center items-center gap-3 ">
                             <a href="mailto:info@mrcfly.com">
                               <img
@@ -308,7 +322,7 @@ export default function TrackServices() {
                             alt="mrclogo"
                             className="xl:w-[60px] lg:w-[60px] md:w-[50px] w-[40px] "
                           />
-                        </div>
+                        </motion.div>
                       </div>
                     </div>
                   </motion.div>

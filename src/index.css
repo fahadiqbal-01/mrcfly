@@ -15,6 +15,7 @@
   --font-aktura: "aktura", "sans-serif";
   --font-title: "title", "sans-serif";
   --font-stardom: "stardom", "sans-serif";
+  --font-switzersec: "switzersec", "sans-serif";
 }
 
 @font-face {
@@ -62,6 +63,11 @@
   src: url(./assets/fonts/Stardom_Complete/Stardom_Complete/Fonts/OTF/Stardom-Regular.otf);
   format: "opentype";
 }
+@font-face {
+  font-family: switzersec;
+  src: url(./assets/fonts/Switzer_Complete/Switzer_Complete/Fonts/OTF/Switzer-Medium.otf);
+  format: "opentype";
+}
 
 html {
   scroll-behavior: smooth;
@@ -106,5 +112,5 @@ body {
 }
 
 body {
-  background: black ;
+  background: black;
 }

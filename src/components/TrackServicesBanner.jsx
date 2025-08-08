@@ -1,15 +1,26 @@
-import React from "react";
-import { easeOut, motion } from "framer-motion";
+import React, { useEffect } from "react";
+import { motion } from "framer-motion";
 import { HashLink as Link } from "react-router-hash-link";
-import { FaArrowAltCircleDown } from "react-icons/fa";
-import { GiClick } from "react-icons/gi";
+import lottie from "lottie-web";
 
 const TrackServicesBanner = () => {
+  useEffect(() => {
+    const anim = lottie.loadAnimation({
+      container: document.getElementById("hand-click-animation"),
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      path: "/images/Hand tap.json", // Make sure this path is correct for your hand-clicking animation
+    });
+
+    return () => anim.destroy(); // Cleanup on unmount
+  }, []);
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{delay:0.5, duration: 0.7, ease: "easeInOut" }}
+      transition={{ delay: 0.5, duration: 0.7, ease: "easeInOut" }}
       viewport={{ once: true }}
       className=" h-full max-h-screen drop-shadow-lg overflow-hidden relative "
     >
@@ -25,8 +36,11 @@ const TrackServicesBanner = () => {
         className=" xl:text-[26px] lg:text-[23px] md:text-[20px] sm:text-[17px] text-[14px] text-white absolute left-4 top-4 
         xl:px-[16px] xl:py-[8px] lg:px-[12px] lg:py-[6px] md:px-[8px] md:py-[4px] px-[6px] py-[3px] bg-black/60 backdrop-blur-sm rounded-lg flex items-center gap-[6px] "
       >
-        <GiClick />
-        Track your services
+        <div
+          id="hand-click-animation"
+          className="xl:w-[55px] lg:w-[45px] md:w-[35px] w-[30px] invert-100"
+        ></div>
+        Click here to Track your services
       </Link>
     </motion.div>
   );
