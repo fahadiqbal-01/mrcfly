@@ -17,12 +17,14 @@ const TrackServicesBanner = () => {
   }, []);
 
   return (
-    <div
-      className=" h-full max-h-screen drop-shadow-lg overflow-hidden relative "
-    >
-      <Link to="#mid-form-top" smooth  >
+    <div className=" h-full max-h-screen drop-shadow-lg overflow-hidden relative ">
+      <Link to="#mid-form-top" smooth>
         <video autoPlay loop playsInline muted className=" w-full mx-auto ">
-          <source src="video/trackvid2.mp4" type="video/mp4" media="(min-width: 1024px" />
+          <source
+            src="video/trackvid2.mp4"
+            type="video/mp4"
+            media="(min-width: 768px)"
+          />
         </video>
       </Link>
 
