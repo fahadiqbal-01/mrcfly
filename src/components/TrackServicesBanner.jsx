@@ -23,7 +23,6 @@ const TrackServicesBanner = () => {
           <source
             src="video/trackvid2.mp4"
             type="video/mp4"
-            media="(min-width: 768px)"
           />
         </video>
       </Link>
