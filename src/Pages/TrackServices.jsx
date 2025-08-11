@@ -51,7 +51,7 @@ export default function TrackServices() {
         position: "right", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
-          background: "#000000", // Red background
+          background: "#f67a1b", // Red background
           color: "#ffffff", // White text
           fontFamily: "Gsans, sans-serif", // Custom font
           fontSize: "16px", // Font size// Orange border
@@ -81,7 +81,7 @@ export default function TrackServices() {
         position: "right", // `left`, `center` or `right`
         stopOnFocus: true, // Prevents dismissing of toast on hover
         style: {
-          background: "#000000", // Red background
+          background: "#f67a1b", // Red background
           color: "#ffffff", // White text
           fontFamily: "Gsans, sans-serif", // Custom font
           fontSize: "16px", // Font size// Orange border
@@ -167,7 +167,8 @@ export default function TrackServices() {
                       id="service-id-input"
                       className=" font-G-Sans-medium bg-white xl:px-[25px] xl:py-[19px] lg:px-[20px] lg:py-[16px] px-[16px] py-[12px]
           w-full xl:max-w-[610px] lg:max-w-[510px] md:max-w-[410px] max-w-[310px] border-2 border-[#9CA3AF] rounded-[8px]
-          focus:outline-none focus:border-orange xl:placeholder:text-[18px] lg:placeholder:text-[16px] md:placeholder:text-[14px] placeholder:select-none placeholder:font-G-Sans no-arrows "
+          focus:outline-none focus:border-orange focus:placeholder:text-orange xl:placeholder:text-[18px] lg:placeholder:text-[16px] 
+          md:placeholder:text-[14px] placeholder:select-none placeholder:font-G-Sans  "
                       type="text"
                       value={id}
                       placeholder="Enter Passport/NID Number"
@@ -190,9 +191,7 @@ export default function TrackServices() {
                     className=" w-full mx-auto py-4 "
                   >
                     <div className="flex flex-col lg:flex-row bg-transparent  ">
-                      <div
-                        className="lg:w-1/2 w-full md:w-[70%] sm:w-[50%] mx-auto relative"
-                      >
+                      <div className="lg:w-1/2 w-full md:w-[70%] sm:w-[50%] mx-auto relative">
                         <img
                           src={data.imageUrl}
                           alt="Cindy Crawford"
@@ -211,9 +210,7 @@ export default function TrackServices() {
                         id="result-container"
                         className="lg:w-1/2 w-full md:w-[70%] sm:w-[50%] mx-auto flex flex-col justify-between xl:pt-34 lg:pt-18 pt-8 "
                       >
-                        <div
-                          className=" flex flex-col items-start xl:pl-10 lg:pl-6 pl-0 "
-                        >
+                        <div className=" flex flex-col items-start xl:pl-10 lg:pl-6 pl-0 ">
                           <h2 className=" font-switzersec xl:text-[42px] lg:text-[30px] md:text-[30px] text-[24px] font-bold text-white mb-2 ">
                             {data.name}
                           </h2>
@@ -269,8 +266,8 @@ export default function TrackServices() {
                           </p>
                         </div>
                         <motion.div
-                          initial={{ opacity: 0}}
-                          whileInView={{ opacity: 1}}
+                          initial={{ opacity: 0 }}
+                          whileInView={{ opacity: 1 }}
                           transition={{
                             delay: 0.5,
                             duration: 0.7,

@@ -7,7 +7,8 @@ import { NavLink } from "react-router-dom";
 import { AiOutlineMenu } from "react-icons/ai";
 import { RiMenu5Line } from "react-icons/ri";
 
-const activeClass = "!text-[#f67a1b] font-G-Sans-medium font-bold"; // Only color and font, no border
+const activeClass =
+  "!text-[#f67a1b] font-G-Sans-medium font-bold after:content-[''] after:h-[3px] after:w-[50%] after:bg-orange after:rounded-lg after:absolute  after:bottom-[-10px] after:left-[50%] after:translate-x-[-50%] after:pointer-events-none relative";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,7 +39,7 @@ const Navbar = () => {
       ref={navRef}
       className="py-[16px] bg-black xl:px-0 lg:px-0 md:px-4 px-0 relative  "
     >
-      <Container className="flex flex-row items-center justify-between ">
+      <Container className="flex flex-row items-center justify-between poin ">
         <NavLink to="/">
           <motion.img
             initial={{ opacity: 0 }}

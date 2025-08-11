@@ -8,7 +8,7 @@ const NotFound = () => {
         <img
           src="images/logomrcsec.png"
           alt="mrc_logo"
-          className=" xl:w-[150px] lg:w-[130px] md:w-[110px] w-[100px] "
+          className=" xl:w-[120px] lg:w-[100px] md:w-[80px] w-[60px] "
         />
         <h1 className=" xl:text-[60px] lg:text-[50px] md:text-[40px] text-[30px] text-white font-G-Sans-bold ">
           404 Not Found
