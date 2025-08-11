@@ -8,9 +8,8 @@ const NeedHelp = () => {
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.7, ease: "easeInOut" }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
       viewport={{ once: true }}
-      id="NeedHelp"
       className=" bg-transparent text-center overflow-hidden py-[80px] xl:mb-0 lg:mb-0 md:mb-0 sm:mb-0 mb-[-65px] relative "
     >
       <div className=" relative z-10  ">

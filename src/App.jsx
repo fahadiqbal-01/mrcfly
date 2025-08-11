@@ -23,7 +23,6 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-        {" "}
         <Route path="/" element={<RootLayout />}>
           <Route index element={<TrackServices />} />
           <Route path="adminmrc" element={<AdminUpload />} />
