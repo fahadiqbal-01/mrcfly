@@ -8,7 +8,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { RiMenu5Line } from "react-icons/ri";
 
 const activeClass =
-  "!text-[#f67a1b] font-G-Sans-medium font-bold after:content-[''] after:h-[3px] after:w-[50%] after:bg-orange after:rounded-lg after:absolute  after:bottom-[-10px] after:left-[50%] after:translate-x-[-50%] after:pointer-events-none relative";
+  "!text-[#f67a1b] font-G-Sans-medium font-bold after:content-[''] after:h-[3px] after:w-[50%] after:bg-orange after:rounded-lg after:absolute xl:after:bottom-[-10px] lg:after:bottom-[-10px] md:after:bottom-[-6px] after:bottom-[-4px] after:left-[50%] after:translate-x-[-50%] after:pointer-events-none xl:after:block lg:after:block md:after:block after:hidden relative";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

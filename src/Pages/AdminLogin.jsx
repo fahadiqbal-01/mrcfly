@@ -15,7 +15,7 @@ export default function AdminLogin() {
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/adminmrc");
     } catch (error) {
-      alert("Login failed: " + error.message);
+      alert("Incorrect email or password.");
     }
   };
 
